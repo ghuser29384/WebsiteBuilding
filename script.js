@@ -2393,62 +2393,135 @@ const DISCOURSE_NODE_COPY = {
 
 const NORMATIVE_GRAPH_SPEC = {
   nodes: [
-    { id: "consequentialism", x: 12, y: 12, type: "theory" },
-    { id: "deontology", x: 37, y: 12, type: "theory" },
-    { id: "contractualism", x: 60, y: 12, type: "theory" },
-    { id: "virtueEthics", x: 82, y: 12, type: "theory" },
-    { id: "parfitTriple", x: 49, y: 30, type: "theory" },
-    { id: "actUtil", x: 6, y: 29, type: "theory" },
-    { id: "ruleUtil", x: 18, y: 31, type: "theory" },
-    { id: "kant", x: 32, y: 30, type: "theory" },
-    { id: "kantian", x: 44, y: 31, type: "theory" },
-    { id: "scanlon", x: 61, y: 30, type: "theory" },
-    { id: "aristotelian", x: 77, y: 30, type: "theory" },
-    { id: "careEthics", x: 90, y: 31, type: "theory" },
-    { id: "trolley", x: 14, y: 58, type: "issue" },
-    { id: "transplant", x: 28, y: 64, type: "issue" },
-    { id: "worldCup", x: 45, y: 60, type: "issue" },
-    { id: "experienceMachine", x: 61, y: 63, type: "issue" },
-    { id: "drowningChild", x: 78, y: 60, type: "issue" },
-    { id: "jimIndians", x: 92, y: 58, type: "issue" },
-    { id: "demandingness", x: 27, y: 82, type: "issue" },
-    { id: "aggregation", x: 48, y: 82, type: "issue" },
-    { id: "partiality", x: 69, y: 82, type: "issue" },
-    { id: "doingAllowing", x: 87, y: 82, type: "issue" }
+    { id: "consequentialism", x: 7, y: 9, type: "theory" },
+    { id: "deontology", x: 27, y: 9, type: "theory" },
+    { id: "contractualism", x: 47, y: 9, type: "theory" },
+    { id: "virtueEthics", x: 67, y: 9, type: "theory" },
+    { id: "parfitTriple", x: 89, y: 9, type: "theory" },
+    { id: "actUtil", x: 4, y: 22, type: "theory" },
+    { id: "ruleUtil", x: 11, y: 24, type: "theory" },
+    { id: "prioritarianism", x: 18, y: 22, type: "theory" },
+    { id: "sufficientarianism", x: 26, y: 24, type: "theory" },
+    { id: "kant", x: 24, y: 29, type: "theory" },
+    { id: "kantian", x: 32, y: 30, type: "theory" },
+    { id: "thresholdDeon", x: 39, y: 24, type: "theory" },
+    { id: "rossPluralism", x: 46, y: 26, type: "theory" },
+    { id: "scanlon", x: 53, y: 25, type: "theory" },
+    { id: "aristotelian", x: 67, y: 25, type: "theory" },
+    { id: "careEthics", x: 77, y: 23, type: "theory" },
+    { id: "trolleySwitch", x: 8, y: 47, type: "issue" },
+    { id: "loopTrolley", x: 16, y: 53, type: "issue" },
+    { id: "trolleyFootbridge", x: 24, y: 57, type: "issue" },
+    { id: "transplantClassic", x: 35, y: 50, type: "issue" },
+    { id: "worldCup", x: 48, y: 56, type: "issue" },
+    { id: "experienceMachine", x: 62, y: 50, type: "issue" },
+    { id: "drowningChild", x: 74, y: 56, type: "issue" },
+    { id: "jimIndians", x: 89, y: 50, type: "issue" },
+    { id: "taurekNumbers", x: 54, y: 64, type: "issue" },
+    { id: "doubleEffect", x: 29, y: 71, type: "issue" },
+    { id: "doingAllowing", x: 20, y: 81, type: "issue" },
+    { id: "rightsConstraints", x: 35, y: 80, type: "issue" },
+    { id: "aggregation", x: 45, y: 85, type: "issue" },
+    { id: "separatenessPersons", x: 56, y: 78, type: "issue" },
+    { id: "demandingness", x: 62, y: 85, type: "issue" },
+    { id: "supererogation", x: 69, y: 78, type: "issue" },
+    { id: "partiality", x: 77, y: 85, type: "issue" },
+    { id: "agentCenteredPrerogative", x: 85, y: 78, type: "issue" },
+    { id: "integrityIssue", x: 91, y: 85, type: "issue" }
   ],
   edges: [
     { from: "consequentialism", to: "actUtil" },
     { from: "consequentialism", to: "ruleUtil" },
+    { from: "consequentialism", to: "prioritarianism" },
+    { from: "consequentialism", to: "sufficientarianism" },
     { from: "deontology", to: "kant" },
     { from: "deontology", to: "kantian" },
+    { from: "deontology", to: "thresholdDeon" },
+    { from: "deontology", to: "rossPluralism" },
     { from: "contractualism", to: "scanlon" },
     { from: "virtueEthics", to: "aristotelian" },
     { from: "virtueEthics", to: "careEthics" },
     { from: "parfitTriple", to: "consequentialism" },
     { from: "parfitTriple", to: "deontology" },
     { from: "parfitTriple", to: "contractualism" },
-    { from: "consequentialism", to: "trolley", type: "issue", relation: "support" },
-    { from: "deontology", to: "trolley", type: "issue", relation: "pressure" },
-    { from: "kantian", to: "trolley", type: "issue", relation: "pressure" },
-    { from: "ruleUtil", to: "trolley", type: "issue", relation: "constraint" },
-    { from: "actUtil", to: "transplant", type: "issue", relation: "pressure" },
-    { from: "deontology", to: "transplant", type: "issue", relation: "support" },
-    { from: "kant", to: "transplant", type: "issue", relation: "support" },
+    { from: "consequentialism", to: "trolleySwitch", type: "issue", relation: "support" },
+    { from: "actUtil", to: "loopTrolley", type: "issue", relation: "support" },
+    { from: "deontology", to: "loopTrolley", type: "issue", relation: "constraint" },
+    { from: "actUtil", to: "trolleyFootbridge", type: "issue", relation: "pressure" },
+    { from: "ruleUtil", to: "trolleyFootbridge", type: "issue", relation: "constraint" },
+    { from: "deontology", to: "trolleyFootbridge", type: "issue", relation: "support" },
+    { from: "kantian", to: "trolleyFootbridge", type: "issue", relation: "support" },
+    { from: "thresholdDeon", to: "trolleyFootbridge", type: "issue", relation: "constraint" },
+    { from: "deontology", to: "transplantClassic", type: "issue", relation: "support" },
+    { from: "kant", to: "transplantClassic", type: "issue", relation: "support" },
+    { from: "actUtil", to: "transplantClassic", type: "issue", relation: "pressure" },
+    { from: "ruleUtil", to: "transplantClassic", type: "issue", relation: "constraint" },
+    { from: "thresholdDeon", to: "transplantClassic", type: "issue", relation: "constraint" },
     { from: "contractualism", to: "worldCup", type: "issue", relation: "support" },
     { from: "scanlon", to: "worldCup", type: "issue", relation: "support" },
+    { from: "consequentialism", to: "worldCup", type: "issue", relation: "pressure" },
+    { from: "prioritarianism", to: "worldCup", type: "issue", relation: "constraint" },
     { from: "parfitTriple", to: "worldCup", type: "issue", relation: "constraint" },
     { from: "consequentialism", to: "experienceMachine", type: "issue", relation: "pressure" },
+    { from: "virtueEthics", to: "experienceMachine", type: "issue", relation: "support" },
+    { from: "aristotelian", to: "experienceMachine", type: "issue", relation: "support" },
+    { from: "consequentialism", to: "drowningChild", type: "issue", relation: "support" },
+    { from: "contractualism", to: "drowningChild", type: "issue", relation: "support" },
     { from: "virtueEthics", to: "drowningChild", type: "issue", relation: "support" },
     { from: "careEthics", to: "drowningChild", type: "issue", relation: "support" },
     { from: "actUtil", to: "demandingness", type: "issue", relation: "pressure" },
+    { from: "consequentialism", to: "demandingness", type: "issue", relation: "pressure" },
+    { from: "sufficientarianism", to: "demandingness", type: "issue", relation: "constraint" },
+    { from: "prioritarianism", to: "demandingness", type: "issue", relation: "constraint" },
     { from: "parfitTriple", to: "demandingness", type: "issue", relation: "pressure" },
     { from: "consequentialism", to: "aggregation", type: "issue", relation: "support" },
+    { from: "prioritarianism", to: "aggregation", type: "issue", relation: "constraint" },
+    { from: "sufficientarianism", to: "aggregation", type: "issue", relation: "constraint" },
     { from: "contractualism", to: "aggregation", type: "issue", relation: "pressure" },
-    { from: "virtueEthics", to: "partiality", type: "issue", relation: "support" },
-    { from: "contractualism", to: "partiality", type: "issue", relation: "pressure" },
+    { from: "scanlon", to: "aggregation", type: "issue", relation: "pressure" },
     { from: "deontology", to: "doingAllowing", type: "issue", relation: "support" },
+    { from: "rossPluralism", to: "doingAllowing", type: "issue", relation: "support" },
+    { from: "consequentialism", to: "doingAllowing", type: "issue", relation: "pressure" },
+    { from: "deontology", to: "doubleEffect", type: "issue", relation: "support" },
+    { from: "kant", to: "doubleEffect", type: "issue", relation: "support" },
     { from: "actUtil", to: "jimIndians", type: "issue", relation: "pressure" },
-    { from: "ruleUtil", to: "jimIndians", type: "issue", relation: "pressure" }
+    { from: "ruleUtil", to: "jimIndians", type: "issue", relation: "pressure" },
+    { from: "actUtil", to: "integrityIssue", type: "issue", relation: "pressure" },
+    { from: "ruleUtil", to: "integrityIssue", type: "issue", relation: "pressure" },
+    { from: "virtueEthics", to: "integrityIssue", type: "issue", relation: "support" },
+    { from: "virtueEthics", to: "partiality", type: "issue", relation: "support" },
+    { from: "careEthics", to: "partiality", type: "issue", relation: "support" },
+    { from: "contractualism", to: "partiality", type: "issue", relation: "pressure" },
+    { from: "deontology", to: "rightsConstraints", type: "issue", relation: "support" },
+    { from: "rossPluralism", to: "rightsConstraints", type: "issue", relation: "support" },
+    { from: "actUtil", to: "rightsConstraints", type: "issue", relation: "pressure" },
+    { from: "ruleUtil", to: "rightsConstraints", type: "issue", relation: "constraint" },
+    { from: "contractualism", to: "separatenessPersons", type: "issue", relation: "support" },
+    { from: "deontology", to: "separatenessPersons", type: "issue", relation: "support" },
+    { from: "consequentialism", to: "separatenessPersons", type: "issue", relation: "pressure" },
+    { from: "consequentialism", to: "supererogation", type: "issue", relation: "pressure" },
+    { from: "deontology", to: "supererogation", type: "issue", relation: "support" },
+    { from: "deontology", to: "agentCenteredPrerogative", type: "issue", relation: "support" },
+    { from: "contractualism", to: "agentCenteredPrerogative", type: "issue", relation: "constraint" },
+    { from: "consequentialism", to: "agentCenteredPrerogative", type: "issue", relation: "pressure" },
+    { from: "jimIndians", to: "integrityIssue", type: "issue", relation: "support" },
+    { from: "taurekNumbers", to: "aggregation", type: "issue", relation: "pressure" },
+    { from: "worldCup", to: "aggregation", type: "issue", relation: "pressure" },
+    { from: "worldCup", to: "separatenessPersons", type: "issue", relation: "support" },
+    { from: "aggregation", to: "separatenessPersons", type: "issue", relation: "pressure" },
+    { from: "trolleySwitch", to: "doubleEffect", type: "issue", relation: "constraint" },
+    { from: "loopTrolley", to: "doubleEffect", type: "issue", relation: "pressure" },
+    { from: "trolleyFootbridge", to: "doubleEffect", type: "issue", relation: "pressure" },
+    { from: "transplantClassic", to: "doingAllowing", type: "issue", relation: "support" },
+    { from: "trolleyFootbridge", to: "doingAllowing", type: "issue", relation: "support" },
+    { from: "transplantClassic", to: "rightsConstraints", type: "issue", relation: "support" },
+    { from: "trolleyFootbridge", to: "rightsConstraints", type: "issue", relation: "support" },
+    { from: "doingAllowing", to: "rightsConstraints", type: "issue", relation: "support" },
+    { from: "drowningChild", to: "supererogation", type: "issue", relation: "pressure" },
+    { from: "demandingness", to: "supererogation", type: "issue", relation: "pressure" },
+    { from: "jimIndians", to: "agentCenteredPrerogative", type: "issue", relation: "support" },
+    { from: "integrityIssue", to: "agentCenteredPrerogative", type: "issue", relation: "support" },
+    { from: "partiality", to: "agentCenteredPrerogative", type: "issue", relation: "support" }
   ]
 };
 
@@ -2457,540 +2530,1548 @@ const NORMATIVE_NODE_COPY = {
     consequentialism: {
       label: "Consequentialism",
       title: "Consequentialism",
-      body: "Actions are right insofar as they produce the best overall outcomes.",
+      body: "Right action depends on producing the best overall outcome.",
       claims: [
-        "Strong on impartial aggregation and policy-level comparison.",
-        "Pressured by integrity, rights, and demandingness objections."
+        "Strength: clear comparative decision structure across options.",
+        "Pressure: must answer rights, integrity, and demandingness objections."
       ],
-      intuition: "Many approve saving more lives in switch-style trolley cases.",
-      classic: "If outcomes are all that matter, constraints on harming one to save many become hard to justify."
+      intuition: "Switch-style trolley judgments often support saving more lives.",
+      classic: "If only outcomes matter, why are some means to good outcomes still impermissible?"
     },
     actUtil: {
       label: "Act Utilitarianism",
       title: "Act Utilitarianism",
-      body: "Each act is evaluated directly by whether it maximizes total utility in that specific case.",
+      body: "Each act is assessed directly by expected utility in that case.",
       claims: [
-        "Highly flexible and case-sensitive.",
-        "Can conflict with strong intuitions about rights and fairness."
+        "High flexibility and sensitivity to local consequences.",
+        "Vulnerable in transplant and integrity-style cases."
       ],
-      intuition: "Organ transplant and Jim-style cases pressure pure act maximization.",
-      classic: "The best single act may still look unjust or integrity-violating."
+      intuition: "Can validate verdicts that clash with anti-use intuitions.",
+      classic: "Case-by-case maximization can seem too permissive about harming innocents."
     },
     ruleUtil: {
       label: "Rule Utilitarianism",
       title: "Rule Utilitarianism",
-      body: "An act is right when it conforms to rules whose general acceptance maximizes utility.",
+      body: "An act is right if it follows rules whose general acceptance yields the best outcomes.",
       claims: [
-        "Attempts to preserve utilitarian rationale while protecting stable constraints.",
-        "Must explain why rules cannot be rewritten ad hoc by act-level gains."
+        "Protects trust and institutions better than pure act maximization.",
+        "Must avoid collapse back into act utilitarianism."
       ],
-      intuition: "Sometimes fits common intuitions better than act utilitarianism.",
-      classic: "The collapse problem: is rule utilitarianism just act utilitarianism in disguise?"
+      intuition: "Can explain constraints in footbridge and transplant-like settings.",
+      classic: "How rigid should utility-maximizing rules remain in exceptional cases?"
+    },
+    prioritarianism: {
+      label: "Prioritarianism",
+      title: "Prioritarian Consequentialism",
+      body: "Improving well-being matters more when benefits go to the worse off.",
+      claims: [
+        "Retains outcome focus while modifying pure sum-aggregation.",
+        "Still inherits many consequentialist structure problems."
+      ],
+      intuition: "Handles distributive fairness better than simple total utility.",
+      classic: "Weighting the worse off helps, but may not solve anti-use objections."
+    },
+    sufficientarianism: {
+      label: "Sufficientarianism",
+      title: "Sufficientarian Consequentialism",
+      body: "Priority is to bring everyone above a threshold of enough, rather than endlessly maximizing totals.",
+      claims: [
+        "Mitigates demandingness by capping what justice requires once sufficiency is secured.",
+        "Still must explain tradeoffs when many people remain below threshold."
+      ],
+      intuition: "Explains why tiny gains for the well-off should not outrank urgent rescue needs.",
+      classic: "Where the sufficiency threshold sits is heavily contested."
     },
     deontology: {
       label: "Deontology",
       title: "Deontology",
-      body: "Some actions are wrong in themselves because they violate duties, rights, or constraints.",
+      body: "Some acts are constrained by duty, rights, and respect for persons.",
       claims: [
-        "Protects persons from being used merely as instruments.",
-        "Must explain why side-constraints remain plausible under catastrophic outcomes."
+        "Explains strong anti-use intuitions in transplant and footbridge cases.",
+        "Must explain thresholds in catastrophe scenarios."
       ],
-      intuition: "Organ transplant intuitions strongly favor deontic constraints.",
-      classic: "How strict can constraints be when many lives are at stake?"
+      intuition: "Killing one as a means often feels categorically wrong.",
+      classic: "How strict are constraints when violating one saves many?"
     },
     kant: {
       label: "Kant",
       title: "Kantian Deontology (Kant)",
-      body: "Moral law is grounded in rational agency and universalizable maxims.",
+      body: "Morality is grounded in rational agency, universal law, and humanity as an end.",
       claims: [
-        "Humanity formula prohibits using persons merely as means.",
-        "Duties have priority over pure welfare maximization."
+        "Rejects treating persons merely as tools.",
+        "Provides principled tests for maxims."
       ],
-      intuition: "Strongly rejects killing one innocent person as a tool for aggregate gain.",
-      classic: "Universal law and humanity formulations structure strict constraints."
+      intuition: "Transplant-style forced harvesting looks paradigmatically wrong.",
+      classic: "Universalizability and humanity formulations shape strong constraints."
     },
     kantian: {
       label: "Kantian Theories",
       title: "Contemporary Kantian Theories",
-      body: "Neo-Kantian views adapt duties, dignity, and respect-based constraints for modern moral problems.",
+      body: "Neo-Kantian frameworks refine dignity, coercion, and public justifiability constraints.",
       claims: [
-        "Develop nuanced accounts of permission, coercion, and public justification.",
-        "Need principled criteria in hard rescue and conflict cases."
+        "Sophisticated resources for means/end distinctions.",
+        "Needs clear policy guidance in conflict cases."
       ],
-      intuition: "Footbridge-style intuitions often support stronger anti-use constraints.",
-      classic: "Can Kantian frameworks explain both strict prohibitions and emergency exceptions?"
+      intuition: "Footbridge verdicts are often used as a stress test.",
+      classic: "Can modern Kantianism preserve constraints without inflexibility?"
+    },
+    thresholdDeon: {
+      label: "Threshold Deontology",
+      title: "Threshold Deontology",
+      body: "Deontic constraints hold until consequences cross a grave threshold.",
+      claims: [
+        "Explains why constraints are strong but not absolute.",
+        "Needs non-arbitrary threshold criteria."
+      ],
+      intuition: "Captures mixed judgments where catastrophic harm seems to override constraints.",
+      classic: "Where the threshold lies is theoretically contested."
+    },
+    rossPluralism: {
+      label: "Rossian Pluralism",
+      title: "Rossian Deontology (Prima Facie Duties)",
+      body: "Morality includes multiple prima facie duties (fidelity, non-maleficence, beneficence, justice) resolved contextually.",
+      claims: [
+        "Avoids one-rule rigidity within deontology.",
+        "Needs transparent principles for resolving duty conflicts."
+      ],
+      intuition: "Some duties can outweigh others without collapsing into pure aggregation.",
+      classic: "How can duty-balancing remain principled rather than ad hoc?"
     },
     contractualism: {
       label: "Contractualism",
       title: "Contractualism",
-      body: "Right action follows principles that no one could reasonably reject as a basis for informed, unforced agreement.",
+      body: "Right action follows principles no one could reasonably reject.",
       claims: [
-        "Centers justifiability to each person rather than pure sum-ranking.",
-        "Faces questions about aggregation and special obligations."
+        "Centers person-to-person justification over pure aggregate ranking.",
+        "Faces hard questions about numbers and special obligations."
       ],
-      intuition: "Protects individuals from being overridden by many minor complaints.",
-      classic: "How should reasonable rejectability treat numbers and burden asymmetry?"
+      intuition: "One severe complaint can outweigh many trivial ones.",
+      classic: "How should rejectability handle interpersonal aggregation?"
     },
     scanlon: {
       label: "Scanlon",
       title: "Scanlonian Contractualism",
-      body: "Wrongness is what would be disallowed by principles no one could reasonably reject.",
+      body: "Wrongness is what principles reasonably rejectable by persons would forbid.",
       claims: [
-        "Highlights interpersonal justification and complaint-based reasoning.",
-        "Requires careful handling of many-small vs one-large burden cases."
+        "Complaint-based and interpersonal in structure.",
+        "Designed to resist flattening persons into utility containers."
       ],
-      intuition: "The World Cup case probes aggregation limits in rejectability reasoning.",
-      classic: "Contractualist reasoning tracks what we can justify to each person, not what maximizes value."
+      intuition: "World Cup scenario probes whether tiny complaints can add up against grave burdens.",
+      classic: "Justification to each person, not maximization, drives verdicts."
     },
     virtueEthics: {
       label: "Virtue Ethics",
       title: "Virtue Ethics",
-      body: "Ethics is fundamentally about character, practical wisdom, and flourishing forms of life.",
+      body: "Ethics centers on character, practical wisdom, and human flourishing.",
       claims: [
-        "Explains moral perception, motivation, and context-sensitive judgment.",
-        "Must connect virtue language to action-guidance in hard policy dilemmas."
+        "Explains moral perception and motivation.",
+        "Must link character language to difficult institutional choices."
       ],
-      intuition: "Drowning child intuitions are often framed as failures of compassion and practical wisdom.",
-      classic: "What would a practically wise and virtuous agent characteristically do?"
+      intuition: "Drowning-child failures are often read as character failures.",
+      classic: "What would a phronimos (practically wise person) characteristically do?"
     },
     aristotelian: {
       label: "Aristotelian",
       title: "Aristotelian Virtue Ethics",
-      body: "Virtues are stable excellences cultivated through habituation and guided by practical reason.",
+      body: "Virtues are cultivated excellences guided by practical reason and aimed at eudaimonia.",
       claims: [
-        "Moral evaluation centers on living well rather than rule-application alone.",
-        "Doctrine of the mean is not arithmetic moderation but context-sensitive excellence."
+        "Focuses on stable dispositions and practical discernment.",
+        "Doctrine of the mean is context-sensitive, not arithmetic compromise."
       ],
-      intuition: "Character and formation matter for consistent ethical perception.",
-      classic: "Eudaimonia-oriented ethics asks what life-pattern best realizes human flourishing."
+      intuition: "Habit and formation are central to reliable judgment.",
+      classic: "Living well structures moral evaluation more deeply than rule compliance alone."
     },
     careEthics: {
       label: "Care Ethics",
       title: "Care Ethics",
-      body: "Moral judgment emphasizes relationships, vulnerability, dependency, and responsive care.",
+      body: "Morality gives priority to responsive care, dependency, and relational responsibility.",
       claims: [
-        "Challenges abstract impartial models that neglect relational reality.",
-        "Must still explain fairness across wider institutions."
+        "Corrects overly abstract impartial models.",
+        "Must still address fairness at broader institutional scale."
       ],
-      intuition: "Partial responsibilities to family and concrete others gain normative weight.",
-      classic: "Good moral judgment may require attentive responsiveness, not only rule-consistency."
+      intuition: "Relational obligations can be normatively basic, not derivative.",
+      classic: "Attentive response to vulnerability is a core moral competence."
     },
     parfitTriple: {
-      label: "Parfit's Triple Theory",
+      label: "Parfit Triple Theory",
       title: "Parfit's Triple Theory",
-      body: "Parfit argues top versions of Kantianism, contractualism, and consequentialism converge on largely the same practical verdicts.",
+      body: "Parfit argues the best versions of consequentialism, Kantianism, and contractualism converge.",
       claims: [
-        "Seeks theoretical unification without erasing disagreement.",
-        "Must show convergence is robust in hard edge cases."
+        "Frames disagreement as partial and potentially reconcilable.",
+        "Convergence must survive hard thought-experiment cases."
       ],
-      intuition: "Convergence is attractive when single-theory verdicts diverge in thought experiments.",
-      classic: "If best forms converge, many traditional disputes may concern formulation more than substance."
+      intuition: "Attractive when distinct theories deliver similar all-things-considered verdicts.",
+      classic: "Are disputes mostly verbal once strongest forms are compared?"
     },
-    trolley: {
-      label: "Trolley Problem",
-      title: "Trolley Problem Intuitions",
-      body: "Many judge switching a track permissible while judging pushing a person impermissible, despite similar outcome counts.",
+    trolleySwitch: {
+      label: "Trolley (Switch)",
+      title: "Trolley: Switch Variant",
+      body: "Redirecting a runaway trolley to kill one instead of five is often judged permissible.",
       claims: [
-        "Tests doing/allowing and means/end distinctions.",
-        "Creates tension for pure outcome-maximizing views."
+        "Supports outcome-sensitive reasoning.",
+        "Raises questions about agency and redirection."
       ],
-      intuition: "Switch vs footbridge asymmetry is one of the most discussed normative intuitions.",
-      classic: "Why does physically using a person feel morally different from redirecting a threat?"
+      intuition: "Many accept switching in ways they reject pushing.",
+      classic: "Is redirection morally different from using someone as a means?"
     },
-    transplant: {
+    loopTrolley: {
+      label: "Trolley (Loop)",
+      title: "Trolley: Loop Variant",
+      body: "Diverting the trolley onto a loop where one person's body stops it and saves five.",
+      claims: [
+        "Complicates the simple switch/footbridge contrast.",
+        "Tests whether intention-focused principles can track causal structure."
+      ],
+      intuition: "Many judge loop harder than switch, but not identical to footbridge push.",
+      classic: "Is the person merely a foreseen victim, or being functionally used as a means?"
+    },
+    trolleyFootbridge: {
+      label: "Trolley (Footbridge)",
+      title: "Trolley: Footbridge Variant",
+      body: "Pushing one person to stop the trolley and save five is often judged impermissible.",
+      claims: [
+        "Pressures pure consequentialist symmetry.",
+        "Supports means/end and anti-use distinctions."
+      ],
+      intuition: "Push vs switch asymmetry is a central modern test case.",
+      classic: "What morally relevant difference explains opposite verdicts?"
+    },
+    transplantClassic: {
       label: "Organ Transplant",
       title: "Organ Transplant Problem",
-      body: "Should one healthy person be killed for organs to save five patients?",
+      body: "Killing one healthy person for organs to save five others.",
       claims: [
-        "Powerful test of rights, dignity, and anti-aggregation constraints.",
-        "Challenges theories that rank options only by total lives saved."
+        "Tests rights constraints against aggregate welfare.",
+        "Often treated as paradigm anti-use case."
       ],
-      intuition: "Most reject forced harvesting despite aggregate benefit.",
-      classic: "Can a theory preserve both impartial concern and strict anti-use constraints?"
+      intuition: "Most reject forced harvesting despite greater lives saved.",
+      classic: "Can impartial concern coexist with strict constraints on intentional harm?"
     },
     worldCup: {
       label: "World Cup Case",
       title: "Scanlon's World Cup Scenario",
-      body: "Can many tiny disappointments to spectators justify imposing one severe burden on a single person?",
+      body: "Can many trivial complaints outweigh one person's severe burden?",
       claims: [
-        "Pressures unrestricted aggregation.",
-        "Supports complaint-based interpersonal justification."
+        "Tests aggregation limits in interpersonal justification.",
+        "Central contractualist challenge case."
       ],
-      intuition: "One person's serious burden often seems not outweighed by many trivial complaints.",
-      classic: "Reasonable rejectability asks whether a principle is defensible person-to-person."
+      intuition: "Many think grave burdens cannot be traded for many tiny gains.",
+      classic: "How should moral theory compare unlike complaint magnitudes?"
     },
     experienceMachine: {
       label: "Experience Machine",
       title: "Experience Machine",
-      body: "Would a life of perfect simulation and pleasure be as good as real achievement and relationships?",
+      body: "Would perfect simulated pleasure be as good as real achievement and reality contact?",
       claims: [
-        "Pressures hedonistic reductions of value.",
-        "Highlights authenticity, achievement, and contact with reality."
+        "Presses hedonistic reductions of value.",
+        "Supports pluralist or authenticity-sensitive accounts."
       ],
-      intuition: "Many refuse plugging in, suggesting value exceeds felt pleasure.",
-      classic: "If pleasure were all that mattered, refusal looks irrational."
+      intuition: "Widespread reluctance to plug in suggests value beyond pleasure.",
+      classic: "If pleasure is all that matters, refusal becomes hard to explain."
     },
     drowningChild: {
       label: "Drowning Child",
       title: "Drowning Child Case",
-      body: "If you can save a nearby child at low personal cost, are you morally required to do it?",
+      body: "If severe harm can be prevented at low personal cost, must you act?",
       claims: [
-        "Supports strong duties of easy rescue.",
-        "Connects beneficence with debates on demandingness."
+        "Supports strong easy-rescue duties.",
+        "Feeds debates on global beneficence and demandingness."
       ],
-      intuition: "Failure to help appears seriously blameworthy.",
-      classic: "Local rescue intuition motivates broader duties to prevent distant severe harms."
+      intuition: "Non-rescue appears plainly blameworthy.",
+      classic: "How far should rescue duties extend beyond local emergencies?"
     },
     jimIndians: {
       label: "Jim and the Indians",
       title: "Jim and the Indians",
-      body: "A traveler may kill one innocent person to prevent a greater massacre by another agent.",
+      body: "A traveler can kill one to prevent many killings by another agent.",
       claims: [
-        "Tests integrity objections to utilitarian calculation.",
-        "Highlights agent-relative responsibility."
+        "Classic integrity objection pressure test.",
+        "Highlights agent-relative versus outcome-only reasons."
       ],
-      intuition: "Many resist being made complicit even when outcomes improve numerically.",
-      classic: "Is morality only about state-of-affairs, or also about who does what?"
+      intuition: "Many resist being made the direct author of a wrongful killing.",
+      classic: "Does morality judge only states of affairs, or also authorship?"
     },
-    demandingness: {
-      label: "Demandingness",
-      title: "Demandingness Objection",
-      body: "Some theories seem to require excessive personal sacrifice whenever greater benefit can be produced.",
+    taurekNumbers: {
+      label: "Numbers Problem",
+      title: "Taurek-Style Numbers Problem",
+      body: "Should numbers always decide when one can save either one person or many?",
       claims: [
-        "Targets act utilitarianism and strong beneficence duties.",
-        "Forces boundary-setting on what morality can demand."
+        "Challenges simple additive aggregation.",
+        "Forces views to justify the role of counting."
       ],
-      intuition: "A plausible morality should not consume all personal projects.",
-      classic: "How much sacrifice is required before morality becomes unreasonably burdensome?"
+      intuition: "Some reject automatic 'more lives always wins' verdicts.",
+      classic: "When, if ever, may numbers be morally decisive?"
+    },
+    doubleEffect: {
+      label: "Double Effect",
+      title: "Doctrine of Double Effect",
+      body: "Distinguishes intended harm from harm foreseen as a side effect.",
+      claims: [
+        "Used to explain switch/footbridge asymmetry.",
+        "Critics argue intention tests may be unstable."
+      ],
+      intuition: "Intending harm seems worse than merely foreseeing it.",
+      classic: "Can intention/foresight differences ground robust moral constraints?"
     },
     aggregation: {
       label: "Aggregation",
       title: "Aggregation Problem",
-      body: "When and how should many small benefits or complaints outweigh one major burden?",
+      body: "How should many small gains or complaints compare with one large burden?",
       claims: [
-        "Central to utilitarian and contractualist disagreement.",
-        "Distinguishes sum-ranking from person-centered justification."
+        "Core fault line between outcome ranking and person-centered justification.",
+        "Interacts with World Cup and Numbers cases."
       ],
-      intuition: "Many reject simple addition across qualitatively different burdens.",
-      classic: "Numbers matter, but perhaps not in every moral context."
-    },
-    partiality: {
-      label: "Partiality",
-      title: "Partiality and Special Obligations",
-      body: "Should morality allow favoring family, friends, and specific commitments over strict impartial maximizing?",
-      claims: [
-        "Pressures strongly impartial theories.",
-        "Supports virtue and care-based accounts of relationship-grounded duty."
-      ],
-      intuition: "Many think loyalty can be justified even when it is not globally maximizing.",
-      classic: "Can impartial moral theory fully capture the normativity of close relationships?"
+      intuition: "Simple addition often feels too crude across burden types.",
+      classic: "Numbers matter, but perhaps not in a purely additive way."
     },
     doingAllowing: {
       label: "Doing vs Allowing",
       title: "Doing/Allowing Distinction",
-      body: "Is doing harm morally worse than merely allowing comparable harm?",
+      body: "Actively doing harm may be morally weightier than merely allowing harm.",
       claims: [
-        "Often used to explain deontic constraints in rescue and trolley cases.",
-        "Contested by views that prioritize only final outcomes."
+        "Supports deontic constraints in rescue/transplant/trolley disputes.",
+        "Outcome-focused views treat it as less fundamental."
       ],
-      intuition: "Direct harmful agency appears morally weightier than omission.",
-      classic: "Can this distinction be principled rather than ad hoc?"
+      intuition: "Directly causing harm often seems worse than omission.",
+      classic: "Can this distinction be principled and non-ad hoc?"
+    },
+    rightsConstraints: {
+      label: "Rights Constraints",
+      title: "Rights as Side Constraints",
+      body: "Some rights limit what may be done even when violating them would improve aggregate outcomes.",
+      claims: [
+        "Explains anti-harvesting and anti-push verdicts.",
+        "Needs criteria for scope, waiver, and emergency override."
+      ],
+      intuition: "Rights often function as blockers, not just as one value among others.",
+      classic: "Can side constraints remain stable under catastrophe-level stakes?"
+    },
+    separatenessPersons: {
+      label: "Separateness of Persons",
+      title: "Separateness of Persons",
+      body: "Individuals are distinct claimants; one person's grave burden cannot always be offset by many tiny gains to others.",
+      claims: [
+        "Anchors anti-aggregation arguments in contractualist and deontic traditions.",
+        "Pressures person-neutral maximizing frameworks."
+      ],
+      intuition: "People resist being treated as interchangeable welfare slots.",
+      classic: "When may numbers count without erasing distinct individual claims?"
+    },
+    demandingness: {
+      label: "Demandingness",
+      title: "Demandingness Objection",
+      body: "Some theories seem to require excessive, near-total sacrifice for greater good.",
+      claims: [
+        "Targets strong forms of consequentialism and beneficence.",
+        "Requires a credible limit on moral burden."
+      ],
+      intuition: "Morality should not erase all personal projects.",
+      classic: "Where should the boundary between duty and supererogation lie?"
+    },
+    supererogation: {
+      label: "Supererogation",
+      title: "Supererogation and Optional Good",
+      body: "Some morally excellent acts are admirable but not strictly required.",
+      claims: [
+        "Creates space between duty and moral heroism.",
+        "Demanding theories risk collapsing the optional/required distinction."
+      ],
+      intuition: "Giving everything away appears saintly, not mandatory for all agents.",
+      classic: "What principle marks the boundary between required and beyond-duty acts?"
+    },
+    partiality: {
+      label: "Partiality",
+      title: "Partiality and Special Obligations",
+      body: "Can morality permit favoring family, friends, and commitments over strict impartiality?",
+      claims: [
+        "Supports care and virtue frameworks.",
+        "Pressures fully impartial person-neutral ranking."
+      ],
+      intuition: "Loyalty can seem morally required, not merely optional.",
+      classic: "How far can special obligations extend without unfairness?"
+    },
+    agentCenteredPrerogative: {
+      label: "Agent-Centered Prerogatives",
+      title: "Agent-Centered Prerogatives",
+      body: "Agents may give bounded extra weight to their own projects and commitments.",
+      claims: [
+        "Responds to integrity objections and personal project concerns.",
+        "Needs guardrails to avoid collapsing into self-serving partiality."
+      ],
+      intuition: "Morality should guide a life an agent can own, not erase authorship.",
+      classic: "How much self-priority is permitted before impartial concern is betrayed?"
+    },
+    integrityIssue: {
+      label: "Integrity Objection",
+      title: "Integrity Objection",
+      body: "A theory may fail if it alienates agents from their commitments and authorship responsibility.",
+      claims: [
+        "Central in Williams-style criticism of utilitarianism.",
+        "Links case verdicts to moral psychology and agency."
+      ],
+      intuition: "Who performs the act can matter morally, not only what outcomes result.",
+      classic: "Moral theory should not erase the agent's practical identity."
     }
   },
   zh: {
     consequentialism: {
       label: "后果主义",
       title: "后果主义",
-      body: "行为是否正确取决于其是否产生整体最优结果。",
+      body: "行为正确性取决于是否产生整体最优结果。",
       claims: [
-        "擅长处理总体比较与政策层面的结果评估。",
-        "常受人格完整性、权利约束与苛求性批评。"
+        "优势：可对方案进行系统比较。",
+        "压力：需回应权利、完整性与苛求性反驳。"
       ],
-      intuition: "在“扳道岔”类案例中，很多人支持“多救少害”的结果导向。",
-      classic: "若结果是唯一标准，如何稳固地反对“伤害一人以救多人”？"
+      intuition: "“扳道岔”常支持“多救少害”的结果导向。",
+      classic: "若只看结果，为何某些达成好结果的手段仍不可接受？"
     },
     actUtil: {
       label: "行为功利主义",
       title: "行为功利主义",
-      body: "每个具体行为都直接按其是否最大化总效用来评估。",
+      body: "每个具体行为都按该情境下预期总效用最大化来评估。",
       claims: [
-        "对个案变化高度敏感，决策灵活。",
-        "可能与权利、公平等强直觉发生冲突。"
+        "对个案变化敏感、灵活。",
+        "在器官移植与完整性案例中常受强压力。"
       ],
-      intuition: "器官移植与“吉姆案例”会对纯行为最大化施加压力。",
-      classic: "最优单次行为也可能看起来不公或破坏行动者完整性。"
+      intuition: "可能给出与反工具化直觉冲突的结论。",
+      classic: "个案最大化是否会过度许可牺牲无辜？"
     },
     ruleUtil: {
       label: "规则功利主义",
       title: "规则功利主义",
-      body: "行为是否正确取决于其是否符合“普遍采纳可最大化效用”的规则体系。",
+      body: "行为正确与否取决于其是否符合“普遍采纳可最优”的规则。",
       claims: [
-        "尝试同时保留功利主义目标与稳定约束。",
-        "需解释为何规则不能被个案收益随时改写。"
+        "比行为功利主义更强调制度稳定与信任。",
+        "需避免塌缩为行为功利主义。"
       ],
-      intuition: "在不少直觉案例中，比行为功利主义更贴近常识判断。",
-      classic: "“塌缩问题”：规则功利主义是否会退化为行为功利主义？"
+      intuition: "在推人/移植类案例中可更好容纳约束直觉。",
+      classic: "在极端例外中，规则应维持到何种程度？"
+    },
+    prioritarianism: {
+      label: "优先主义",
+      title: "优先主义后果论",
+      body: "改善较差处境者的福祉具有更高道德权重。",
+      claims: [
+        "修正纯总量主义的分配盲点。",
+        "仍保留不少后果主义结构压力。"
+      ],
+      intuition: "比单纯总和更重视分配公平。",
+      classic: "加权分配能否解决反工具化难题？"
+    },
+    sufficientarianism: {
+      label: "充足主义",
+      title: "充足主义后果论",
+      body: "核心目标是让每个人达到“足够好”的门槛，而非无止境追求总量最大化。",
+      claims: [
+        "在达到充足门槛后，可缓解部分苛求性压力。",
+        "当多人仍低于门槛时，如何排序仍高度争议。"
+      ],
+      intuition: "可解释为何富者的细小收益不应压过急迫救助。",
+      classic: "“充足门槛”究竟设在何处并无共识。"
     },
     deontology: {
       label: "义务论",
       title: "义务论",
-      body: "某些行为因违反义务、权利或约束而本身错误，不可被总结果直接覆盖。",
+      body: "某些行为受义务、权利与人格尊重约束，不能被总结果直接覆盖。",
       claims: [
-        "强调人格不可工具化与权利边界。",
-        "需说明在极端后果下约束为何仍具说服力。"
+        "能解释移植与推人案例中的强约束直觉。",
+        "需解释在灾难阈值下约束如何调整。"
       ],
-      intuition: "器官移植直觉通常强力支持义务论约束。",
-      classic: "当可拯救人数巨大时，约束应当多严格？"
+      intuition: "把人当手段通常被判断为不可允许。",
+      classic: "当违反一人可救多人时，约束应多严格？"
     },
     kant: {
       label: "康德",
       title: "康德式义务论（康德）",
-      body: "道德法则奠基于理性主体与可普遍化原则，强调人作为目的。",
+      body: "道德以理性主体、普遍法则与“人是目的”原则为基础。",
       claims: [
-        "“人性公式”反对把人仅当作手段。",
-        "义务优先于纯粹福利最大化。"
+        "反对把人格仅当作工具。",
+        "通过普遍化检验行为准则。"
       ],
-      intuition: "强烈反对“牺牲无辜者作为工具”。",
-      classic: "普遍法则与人性原则为严格约束提供结构。"
+      intuition: "强制器官摘取是典型“仅当手段”的错误。",
+      classic: "普遍法则与人性公式构成强约束框架。"
     },
     kantian: {
       label: "康德主义理论",
       title: "当代康德主义理论",
-      body: "在现代语境中发展义务、尊严与尊重约束，处理强制、许可与公共正当化问题。",
+      body: "在现代问题中细化尊严、强制、公开可辩护性等约束结构。",
       claims: [
-        "对许可、胁迫与制度义务给出精细区分。",
-        "需在困难救援情境中给出可操作标准。"
+        "能细分手段/目的与许可结构。",
+        "需给出可操作的政策级判断准则。"
       ],
-      intuition: "“推人挡车”类直觉常支持更强反工具化限制。",
-      classic: "如何同时解释严格禁止与紧急例外？"
+      intuition: "“推人挡车”常被用作核心压力测试。",
+      classic: "能否既保留约束又避免僵化？"
+    },
+    thresholdDeon: {
+      label: "阈值义务论",
+      title: "阈值义务论",
+      body: "约束通常有效，但在后果严重到某阈值时可被覆盖。",
+      claims: [
+        "解释“约束很强但非绝对”。",
+        "难点在于阈值标准可能显得任意。"
+      ],
+      intuition: "贴近“平常不可，灾难时可破例”的混合直觉。",
+      classic: "阈值应如何非任意地确定？"
+    },
+    rossPluralism: {
+      label: "罗斯多元义务论",
+      title: "罗斯式义务论（表面义务）",
+      body: "道德包含多种表面义务（守信、不伤害、行善、公正等），并需在情境中权衡。",
+      claims: [
+        "避免把义务论简化为单一绝对规则。",
+        "仍需给出冲突义务的透明裁决标准。"
+      ],
+      intuition: "不同义务可相互衡量，但不等于纯总量加总。",
+      classic: "如何避免把权衡变成“凭直觉拍板”？"
     },
     contractualism: {
       label: "契约论",
       title: "契约论",
-      body: "正确行动应符合“任何人都不可合理拒绝”的原则。",
+      body: "正确行为应符合“任何人都不可合理拒绝”的原则。",
       claims: [
-        "强调人际正当化，而非单纯总量排序。",
-        "在总量比较与特殊义务问题上承受压力。"
+        "强调人际可辩护性而非总量排序。",
+        "在数字与特殊义务问题上面临挑战。"
       ],
-      intuition: "可避免“许多轻微不便压过一人重大损失”。",
-      classic: "在人数与负担不对称时，如何理解“可合理拒绝”？"
+      intuition: "一项重大负担常不应被大量轻微不便轻易压过。",
+      classic: "可拒绝性如何处理人数与负担比较？"
     },
     scanlon: {
       label: "斯坎伦",
       title: "斯坎伦式契约论",
-      body: "错误性来自不可被任何人合理拒绝原则所禁止的行为。",
+      body: "错误性来自不可被任何人合理拒绝原则所禁止。",
       claims: [
-        "以个体抱怨与人际可辩护性为中心。",
-        "需处理“许多小抱怨 vs 少数大伤害”的复杂比较。"
+        "以抱怨结构和人际正当化为核心。",
+        "反对把人简化为效用容器。"
       ],
-      intuition: "世界杯案例专门测试契约论的聚合边界。",
-      classic: "重点不是最大化价值，而是能否向每个人给出理由。"
+      intuition: "世界杯情景专门检验其反聚合直觉处理。",
+      classic: "关键不是最大化，而是能否向每个人分别说明。"
     },
     virtueEthics: {
       label: "德性伦理",
       title: "德性伦理",
-      body: "伦理核心在于品格、实践智慧与何谓繁荣生活。",
+      body: "伦理核心是品格、实践智慧与繁荣生活。",
       claims: [
-        "能解释道德感知、动机与语境化判断。",
-        "需回答在硬性政策冲突中如何给出行动指引。"
+        "可解释道德知觉与动机结构。",
+        "需连接到困难制度选择的行动指引。"
       ],
-      intuition: "“溺水儿童”常被解读为同情与实践智慧的失范。",
-      classic: "关键问题是“有德者在此情境下会如何行动”。"
+      intuition: "溺水儿童案例常被理解为品格与判断失范。",
+      classic: "有德者在此类情境中的稳定做法是什么？"
     },
     aristotelian: {
       label: "亚里士多德传统",
       title: "亚里士多德式德性伦理",
-      body: "德性是经习惯养成的稳定卓越状态，由实践理性引导。",
+      body: "德性是经习惯养成的稳定卓越状态，由实践理性统摄并面向繁荣。",
       claims: [
-        "道德评价聚焦“如何活得好”，不止于规则套用。",
-        "“中道”并非算术居中，而是情境中的卓越恰当。"
+        "强调品格结构而非单次规则套用。",
+        "中道是情境中的恰当，不是机械折中。"
       ],
-      intuition: "品格形成决定了稳定且可靠的道德判断能力。",
-      classic: "以繁荣论框架重构道德实践目标。"
+      intuition: "习惯养成与角色实践决定判断可靠性。",
+      classic: "“活得好”比“单次遵规”更深层地组织评价。"
     },
     careEthics: {
       label: "关怀伦理",
       title: "关怀伦理",
-      body: "重视关系、脆弱性、依赖性与情境中的回应责任。",
+      body: "强调脆弱性、依赖关系与具体回应责任。",
       claims: [
-        "批评抽象的纯不偏不倚模型忽视关系现实。",
-        "同时需解释跨制度层面的公平要求。"
+        "修正抽象不偏不倚模型的关系盲点。",
+        "同时需说明制度层面的公平要求。"
       ],
-      intuition: "关系中的特殊责任在道德上具有正当权重。",
-      classic: "良好判断可能需要细致回应，而非仅规则一致。"
+      intuition: "关系中的特殊义务可具基础性规范地位。",
+      classic: "道德能力包含对他者脆弱性的细致回应。"
     },
     parfitTriple: {
       label: "帕菲特三重理论",
-      title: "帕菲特的三重理论",
-      body: "帕菲特主张最优版本的康德主义、契约论与后果主义在实践结论上高度收敛。",
+      title: "帕菲特三重理论",
+      body: "帕菲特主张最佳后果主义、康德主义与契约论在结论上有显著收敛。",
       claims: [
-        "尝试在保留差异的同时实现理论统一。",
-        "需证明这种收敛在极端案例中仍稳健。"
+        "将传统冲突重新表述为可部分协调。",
+        "收敛论需经受困难案例检验。"
       ],
-      intuition: "当单一理论结论冲突时，收敛路径更具吸引力。",
-      classic: "若最佳版本收敛，许多传统争论可能主要是表述差异。"
+      intuition: "当不同传统在硬案例趋同时，收敛路径更有吸引力。",
+      classic: "最强版本比较后，分歧是否更多是表述层面？"
     },
-    trolley: {
-      label: "电车难题",
-      title: "电车难题直觉",
-      body: "许多人认为“扳道岔可允”但“推人挡车不可允”，即便结果人数类似。",
+    trolleySwitch: {
+      label: "电车（扳道岔）",
+      title: "电车：扳道岔变体",
+      body: "通过改道让 1 人死亡而避免 5 人死亡，常被判断为可允许。",
       claims: [
-        "检验作为/不作为与手段/目的区分。",
-        "对纯结果主义构成持续压力。"
+        "支持某种结果敏感排序。",
+        "引出“改道”与“直接利用”区分。"
       ],
-      intuition: "“扳道岔/推人”不对称是规范伦理最核心直觉之一。",
-      classic: "为何“把人当手段”会被视为特别严重？"
+      intuition: "许多人接受改道但拒绝推人。",
+      classic: "改道是否在道德上不同于把人当手段？"
     },
-    transplant: {
+    loopTrolley: {
+      label: "电车（环线）",
+      title: "电车：环线变体",
+      body: "将电车引入环线，导致一人死亡并以其身体阻车，从而救下五人。",
+      claims: [
+        "使“扳道岔/推人”二分变得更复杂。",
+        "检验意图原则能否稳定处理因果结构差异。"
+      ],
+      intuition: "不少人认为其比扳道岔更难、但又不同于天桥推人。",
+      classic: "此人是被可预见地伤及，还是被功能性地“当作手段”？"
+    },
+    trolleyFootbridge: {
+      label: "电车（天桥推人）",
+      title: "电车：天桥推人变体",
+      body: "推下一人阻止电车以救五人，常被判断为不可允许。",
+      claims: [
+        "对纯结果对称性提出强压力。",
+        "支持反工具化与手段/目的区分。"
+      ],
+      intuition: "推人/改道不对称是现代规范伦理核心试金石。",
+      classic: "两案结果类似，为何道德结论相反？"
+    },
+    transplantClassic: {
       label: "器官移植",
       title: "器官移植难题",
-      body: "是否可杀一位健康者取器官以拯救五位病人？",
+      body: "杀死一名健康者取器官以拯救五名病人。",
       claims: [
-        "强力测试权利约束与反聚合界限。",
-        "挑战“只看总救人数”的排序。"
+        "检验权利边界与总效益排序冲突。",
+        "常被视作典型反工具化案例。"
       ],
-      intuition: "多数人拒绝强制摘取，尽管总人数收益更高。",
-      classic: "理论如何同时保留公正关切与反工具化限制？"
+      intuition: "即便可多救人，多数仍拒绝强制摘取。",
+      classic: "如何同时保留公平关切与反故意伤害约束？"
     },
     worldCup: {
       label: "世界杯情景",
       title: "斯坎伦世界杯情景",
-      body: "大量轻微失望能否正当化把一项严重负担施加给单一个人？",
+      body: "许多轻微抱怨能否压过一人的严重负担？",
       claims: [
-        "对无限制聚合提出压力。",
-        "支持以人际可辩护性为中心的推理。"
+        "测试聚合边界与人际正当化。",
+        "是契约论核心压力案例之一。"
       ],
-      intuition: "许多人认为一人的重大损失不应被大量轻微不便轻易压过。",
-      classic: "“可合理拒绝”强调向每个人分别给出理由。"
+      intuition: "重大负担不应被大量轻微不便轻易抵消。",
+      classic: "如何比较性质差异很大的抱怨？"
     },
     experienceMachine: {
       label: "体验机器",
       title: "体验机器",
-      body: "若可获得完美模拟快感，你是否应接入机器终生生活？",
+      body: "完美模拟快乐是否等同于真实成就与真实关系生活？",
       claims: [
-        "挑战把价值简化为主观快乐。",
-        "凸显真实性、成就与与现实接触的价值。"
+        "对享乐主义简化形成压力。",
+        "支持真实性与成就价值维度。"
       ],
-      intuition: "多数人拒绝接入，暗示“快乐并非全部价值”。",
-      classic: "若享乐是唯一价值，拒绝接入将难以解释。"
+      intuition: "多数人不愿“接入机器”提示价值多元。",
+      classic: "若快乐是唯一价值，拒绝接入将难解释。"
     },
     drowningChild: {
       label: "溺水儿童",
       title: "溺水儿童案例",
-      body: "若你能以很小代价拯救近处儿童，是否有道德义务这样做？",
+      body: "若你可低成本阻止严重伤害，是否必须介入救援？",
       claims: [
-        "支持“低成本救援义务”直觉。",
-        "与苛求性争论直接相关。"
+        "支持强“易救助义务”。",
+        "连接全球援助与苛求性争论。"
       ],
-      intuition: "见死不救通常被判断为严重道德过失。",
-      classic: "近处救援直觉是否可推广到远距援助义务？"
+      intuition: "见死不救通常被判断为严重错误。",
+      classic: "近距救援义务能否推广到更广泛情境？"
     },
     jimIndians: {
       label: "吉姆与印第安人",
       title: "吉姆与印第安人",
-      body: "旅行者可杀一名无辜者以阻止他人屠杀更多人。",
+      body: "行动者可杀一人以阻止他人屠杀更多人。",
       claims: [
-        "测试对功利主义的“完整性反驳”。",
-        "凸显行动者相对责任问题。"
+        "经典“完整性反驳”压力测试。",
+        "凸显行动者相对理由与作者责任。"
       ],
       intuition: "不少人拒绝“由我亲手作恶以改善总结果”。",
-      classic: "道德是否只看结果状态，还是也看“谁做了什么”？"
+      classic: "道德是否只看终局状态，还是也看行动者作者性？"
     },
-    demandingness: {
-      label: "苛求性问题",
-      title: "苛求性反驳",
-      body: "某些理论似乎要求个体持续进行高强度牺牲，只要还能产生更多好结果。",
+    taurekNumbers: {
+      label: "人数问题",
+      title: "Taurek 式人数问题",
+      body: "在“救一人还是救多人”中，人数是否总是决定性？",
       claims: [
-        "重点针对行为功利主义与强行善义务。",
-        "迫使理论设定道德要求的合理上限。"
+        "挑战机械加总。",
+        "迫使理论交代“数字何时决定”。"
       ],
-      intuition: "可信的道德理论不应吞噬全部个人计划。",
-      classic: "牺牲到何种程度后，道德要求变得不合理？"
+      intuition: "并非所有人都接受“人数永远决定”。",
+      classic: "数字在何种道德语境下才具有决定权重？"
+    },
+    doubleEffect: {
+      label: "双重效果原则",
+      title: "双重效果原则",
+      body: "区分“有意造成伤害”与“可预见但非意图之副作用”。",
+      claims: [
+        "常用于解释改道/推人差异。",
+        "批评者认为意图判定可能不稳定。"
+      ],
+      intuition: "有意伤害通常比预见副作用更难接受。",
+      classic: "意图/预见区分能否稳固支撑约束？"
     },
     aggregation: {
       label: "聚合问题",
       title: "聚合问题",
-      body: "许多小利益或小抱怨在何时、如何能压过一个重大负担？",
+      body: "许多小收益或小抱怨如何与单个重大负担比较？",
       claims: [
-        "是功利主义与契约论分歧核心。",
-        "区分总量排序与个体可辩护性。"
+        "是结果排序与人际正当化冲突核心。",
+        "与世界杯与人数问题强关联。"
       ],
-      intuition: "很多人拒绝把异质负担做简单加总。",
-      classic: "数字重要，但可能并非在所有语境下都决定性。"
-    },
-    partiality: {
-      label: "偏私与特殊义务",
-      title: "偏私与特殊义务",
-      body: "道德是否允许对家人、朋友与承诺关系给予优先，而非始终严格不偏不倚？",
-      claims: [
-        "对严格不偏不倚理论形成压力。",
-        "支持德性与关怀路径中的关系性义务。"
-      ],
-      intuition: "很多人认为忠诚在道德上可被正当化。",
-      classic: "纯不偏不倚模型能否完整容纳亲密关系规范？"
+      intuition: "简单加总常被认为过于粗糙。",
+      classic: "数字重要，但未必应始终按线性加总处理。"
     },
     doingAllowing: {
       label: "作为/不作为",
       title: "作为与不作为区分",
-      body: "主动造成伤害是否在道德上比允许类似伤害发生更严重？",
+      body: "主动造成伤害是否在道德上比放任类似伤害更重？",
       claims: [
-        "常被用于解释义务论约束与救援边界。",
-        "受仅看终局结果理论的挑战。"
+        "常支撑义务论在救援与伤害中的边界。",
+        "结果主义通常淡化其基础地位。"
       ],
-      intuition: "主动伤害常被视为比不作为更重。",
-      classic: "该区分能否给出非任意、可普遍化标准？"
+      intuition: "直接致害通常比不救助更被严厉评价。",
+      classic: "该区分如何做到原则化而非特设化？"
+    },
+    rightsConstraints: {
+      label: "权利边界约束",
+      title: "权利作为边界约束",
+      body: "某些权利对可行动作设定边界，即使违反它们可提高总体结果也不自动许可。",
+      claims: [
+        "可解释反移植与反推人判断。",
+        "仍需说明边界范围、放弃条件与紧急状态例外。"
+      ],
+      intuition: "权利常像“禁止线”，而非可任意加权的一般价值。",
+      classic: "在灾难级后果下，边界约束能否保持稳定且不任意？"
+    },
+    separatenessPersons: {
+      label: "人格分离性",
+      title: "人格分离性",
+      body: "每个人是独立的道德请求者，一人的重大负担不总能被他人的许多微小收益抵消。",
+      claims: [
+        "是契约论与义务论反聚合论证的重要支点。",
+        "对人中立最大化框架形成持续压力。"
+      ],
+      intuition: "人们通常反对把个体当作可互换的“效用槽位”。",
+      classic: "何时数字可计入，而又不抹平个体请求的独立性？"
+    },
+    demandingness: {
+      label: "苛求性问题",
+      title: "苛求性反驳",
+      body: "理论是否要求个体持续承担过高牺牲负担？",
+      claims: [
+        "重点冲击强后果主义与强行善义务。",
+        "要求明确义务与超义务边界。"
+      ],
+      intuition: "道德不应吞没所有个人计划与关系。",
+      classic: "道德要求的上限应如何设定？"
+    },
+    supererogation: {
+      label: "超义务行为",
+      title: "超义务与可选之善",
+      body: "某些道德上卓越的行为值得赞许，但并非严格义务。",
+      claims: [
+        "在“必须做”与“崇高可敬”之间保留空间。",
+        "高苛求理论容易压缩乃至取消这一区分。"
+      ],
+      intuition: "倾尽所有去救助他人常被视为圣贤之举，而非人人必做。",
+      classic: "如何原则化划定“义务内”与“超义务”边界？"
+    },
+    partiality: {
+      label: "偏私与特殊义务",
+      title: "偏私与特殊义务",
+      body: "道德是否允许对家人、朋友与承诺关系给予优先？",
+      claims: [
+        "支持德性与关怀路径。",
+        "对严格不偏不倚模型构成持续压力。"
+      ],
+      intuition: "忠诚常被视为道德要求而非可有可无。",
+      classic: "特殊义务可扩展多远而不损及公平？"
+    },
+    agentCenteredPrerogative: {
+      label: "行动者中心特许",
+      title: "行动者中心特许",
+      body: "行动者可在一定范围内对自身计划与承诺给予额外权重。",
+      claims: [
+        "回应完整性反驳与个人项目被抹平的问题。",
+        "需设置边界，防止滑向任意自利偏袒。"
+      ],
+      intuition: "道德应可被行动者“拥有”，而非抹去其作者性。",
+      classic: "允许多少“自我优先”才不背离对他者的公正关切？"
+    },
+    integrityIssue: {
+      label: "完整性反驳",
+      title: "完整性反驳",
+      body: "若理论让行动者与其承诺及作者责任脱节，理论可能失真。",
+      claims: [
+        "是 Williams 式反功利主义批评核心。",
+        "把案例判断连接到道德心理与行动者身份。"
+      ],
+      intuition: "“谁做了什么”本身可能具有道德意义。",
+      classic: "道德理论不应把行动者简化为结果生产器。"
     }
   }
 };
 
 const NORMATIVE_RELATION_DETAILS = {
   en: {
-    "consequentialism|trolley": { reason: "Switch-style trolley intuitions often support outcome aggregation: saving five over one appears permissible." },
-    "deontology|trolley": { reason: "Footbridge intuitions pressure deontology to explain when constraints against using persons as means apply." },
-    "kantian|trolley": { reason: "Kantian views are pushed to distinguish redirecting harm from intentionally using a person as an instrument." },
-    "ruleUtil|trolley": { reason: "Rule utilitarianism is constrained to show stable public rules can explain trolley asymmetries better than act-level calculation." },
-    "actUtil|transplant": { reason: "Organ transplant cases strongly pressure act utilitarianism because maximizing lives saved can license killing one innocent person." },
-    "deontology|transplant": { reason: "Transplant intuitions support deontological side-constraints against intentionally harming an innocent person." },
-    "kant|transplant": { reason: "Kantian humanity formulations treat forced harvesting as paradigmatic wrongful use of persons as mere means." },
-    "contractualism|worldCup": { reason: "World Cup cases support contractualism by highlighting person-to-person justifiability over simple addition of minor complaints." },
-    "scanlon|worldCup": { reason: "The scenario is designed to test Scanlon's rejectability framework in many-small versus one-large burden comparisons." },
-    "parfitTriple|worldCup": { reason: "Triple-theory convergence is constrained by whether it can handle anti-aggregation intuitions in cases like World Cup." },
-    "consequentialism|experienceMachine": { reason: "Experience Machine thought experiments pressure hedonistic consequentialism by suggesting authenticity and achievement also matter." },
-    "virtueEthics|drowningChild": { reason: "Drowning-child intuitions support virtue ethics by framing non-rescue as defective character and practical judgment." },
-    "careEthics|drowningChild": { reason: "Care ethics is supported because responsiveness to concrete vulnerability is central in easy-rescue cases." },
-    "actUtil|demandingness": { reason: "Demandingness objections pressure act utilitarianism when it appears to require near-constant self-sacrifice." },
-    "parfitTriple|demandingness": { reason: "Hybrid convergence views face pressure to avoid inheriting the strongest demandingness costs of each component theory." },
-    "consequentialism|aggregation": { reason: "Consequentialist structures generally support aggregation: numbers and total welfare count directly in ranking outcomes." },
-    "contractualism|aggregation": { reason: "Contractualism is pressured by aggregation disputes because it must explain when numbers matter without reducing persons to containers." },
-    "virtueEthics|partiality": { reason: "Virtue ethics supports partiality through role-based excellence in friendship, family, and civic loyalty." },
-    "contractualism|partiality": { reason: "Contractualism faces pressure to justify special obligations while preserving equal justifiability to each person." },
-    "deontology|doingAllowing": { reason: "Doing/allowing distinctions often support deontology by grounding stronger prohibitions on actively doing harm." },
-    "actUtil|jimIndians": { reason: "Jim-style integrity cases pressure act utilitarianism by separating best-state outcomes from agent-centered responsibility." },
-    "ruleUtil|jimIndians": { reason: "Rule utilitarianism is pressured to show whether integrity can be protected by rule architecture rather than act-level exceptions." }
+    "consequentialism|trolleySwitch": {
+      reason: "Switch-variant judgments often align with consequentialist outcome ranking (save five over one).",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "actUtil|trolleyFootbridge": {
+      reason: "Act utilitarian verdicts can permit pushing in footbridge, but this clashes with widespread anti-push intuition.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "ruleUtil|trolleyFootbridge": {
+      reason: "Rule utilitarianism is constrained to explain whether public rules against direct assault better optimize long-run utility.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "deontology|trolleyFootbridge": {
+      reason: "Footbridge cases strongly support deontic anti-use constraints and rights-based limits.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP: Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "kantian|trolleyFootbridge": {
+      reason: "Kantian theories treat pushing as paradigmatically using one person as a means to others' rescue.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "thresholdDeon|trolleyFootbridge": {
+      reason: "Threshold deontology constrains absolute prohibitions by asking whether consequences have crossed catastrophe-level stakes.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "deontology|transplantClassic": {
+      reason: "Transplant intuitions support side-constraints: intentional killing of one innocent person is not easily traded off.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "kant|transplantClassic": {
+      reason: "Kantian humanity formulations classify forced harvesting as treating a person merely as means.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "actUtil|transplantClassic": {
+      reason: "Transplant pressure arises because act-level utility calculations can license sacrificing one for five.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "thresholdDeon|transplantClassic": {
+      reason: "Threshold approaches are constrained to justify when, if ever, anti-killing constraints may be overridden.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "contractualism|worldCup": {
+      reason: "World Cup structure supports contractualism's person-centered rejectability over additive complaint summation.",
+      sources: [
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "scanlon|worldCup": {
+      reason: "The case is built to test Scanlonian treatment of many minor complaints versus one severe burden.",
+      sources: [
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "consequentialism|worldCup": {
+      reason: "Simple aggregation pressures consequentialism when many tiny benefits threaten to outweigh one grave burden.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "parfitTriple|worldCup": {
+      reason: "Convergence claims are constrained by whether triple-theory frameworks can capture anti-aggregation intuitions.",
+      sources: [
+        { label: "SEP: Parfit", url: "https://plato.stanford.edu/entries/parfit/" }
+      ]
+    },
+    "consequentialism|experienceMachine": {
+      reason: "Experience-machine style arguments pressure hedonistic consequentialism by introducing authenticity and achievement values.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "virtueEthics|experienceMachine": {
+      reason: "Virtue ethics supports refusal-to-plug-in intuitions by emphasizing lived activity, practical wisdom, and character formation.",
+      sources: [
+        { label: "SEP: Virtue Ethics", url: "https://plato.stanford.edu/entries/ethics-virtue/" }
+      ]
+    },
+    "consequentialism|drowningChild": {
+      reason: "Easy-rescue intuitions can support consequentialist beneficence: prevent severe harm when cost is low.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "virtueEthics|drowningChild": {
+      reason: "Virtue frameworks read non-rescue as failure of compassion and practical wisdom.",
+      sources: [
+        { label: "SEP: Virtue Ethics", url: "https://plato.stanford.edu/entries/ethics-virtue/" }
+      ]
+    },
+    "careEthics|drowningChild": {
+      reason: "Care ethics is supported because the case foregrounds concrete vulnerability and responsive obligation.",
+      sources: [
+        { label: "SEP: Feminist Ethics", url: "https://plato.stanford.edu/entries/feminism-ethics/" }
+      ]
+    },
+    "actUtil|demandingness": {
+      reason: "Demandingness objections target act utilitarianism when it appears to require near-constant sacrifice.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "consequentialism|demandingness": {
+      reason: "Broad consequentialism faces the burden of explaining limits on sacrifice and personal projects.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "parfitTriple|demandingness": {
+      reason: "Convergence models are pressured to avoid importing the harshest demandingness costs from each component tradition.",
+      sources: [
+        { label: "SEP: Parfit", url: "https://plato.stanford.edu/entries/parfit/" }
+      ]
+    },
+    "consequentialism|aggregation": {
+      reason: "Consequentialist ranking usually supports aggregation: numbers and total welfare directly matter.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "contractualism|aggregation": {
+      reason: "Contractualism is pressured to explain when numbers count while preserving person-centered rejectability.",
+      sources: [
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "scanlon|aggregation": {
+      reason: "Scanlonian frameworks are tested by comparisons between many mild complaints and one severe complaint.",
+      sources: [
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "deontology|doingAllowing": {
+      reason: "Doing/allowing distinctions often support stronger prohibitions on active harm in deontic frameworks.",
+      sources: [
+        { label: "SEP: Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" },
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "consequentialism|doingAllowing": {
+      reason: "Outcome-focused views are pressured to justify why doing/allowing should alter verdicts when outcomes are fixed.",
+      sources: [
+        { label: "SEP: Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "deontology|doubleEffect": {
+      reason: "Doctrine of double effect is a major deontic tool for explaining intention-sensitive constraints.",
+      sources: [
+        { label: "SEP: Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" },
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "kant|doubleEffect": {
+      reason: "Kantian approaches often align with intention-focused constraints central to double-effect reasoning.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP: Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" }
+      ]
+    },
+    "actUtil|jimIndians": {
+      reason: "Jim cases pressure act utilitarianism by highlighting conflict between best outcomes and agent-centered integrity.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "ruleUtil|jimIndians": {
+      reason: "Rule utilitarianism is tested on whether rule architecture can preserve integrity without abandoning utility basis.",
+      sources: [
+        { label: "SEP: Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "actUtil|integrityIssue": {
+      reason: "Integrity objections claim act utilitarianism can alienate agents from core commitments.",
+      sources: [
+        { label: "SEP: Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "ruleUtil|integrityIssue": {
+      reason: "Rule utilitarianism still faces the question whether institutional rules fully answer integrity-based criticism.",
+      sources: [
+        { label: "SEP: Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "virtueEthics|partiality": {
+      reason: "Virtue ethics supports partiality through role-based excellences in friendship, family, and civic loyalty.",
+      sources: [
+        { label: "SEP: Virtue Ethics", url: "https://plato.stanford.edu/entries/ethics-virtue/" }
+      ]
+    },
+    "careEthics|partiality": {
+      reason: "Care ethics supports relational priority and special obligations embedded in dependency structures.",
+      sources: [
+        { label: "SEP: Feminist Ethics", url: "https://plato.stanford.edu/entries/feminism-ethics/" }
+      ]
+    },
+    "contractualism|partiality": {
+      reason: "Contractualism is pressured to reconcile special obligations with equal justifiability to all persons.",
+      sources: [
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "integrityIssue|jimIndians": {
+      reason: "Jim-and-Indians is the canonical integrity case: who acts matters, not only aggregate outcome.",
+      sources: [
+        { label: "SEP: Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "aggregation|taurekNumbers": {
+      reason: "Numbers cases directly pressure linear aggregation assumptions in outcome-ranking theories.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "aggregation|worldCup": {
+      reason: "World Cup structures test whether many trivial complaints should aggregate against severe individual burden.",
+      sources: [
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "doubleEffect|trolleySwitch": {
+      reason: "Switch verdicts are often treated as constrained by side-effect structure rather than intended harm.",
+      sources: [
+        { label: "SEP: Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" }
+      ]
+    },
+    "doubleEffect|trolleyFootbridge": {
+      reason: "Footbridge variants pressure double-effect accounts because causal structure and intention become contested.",
+      sources: [
+        { label: "SEP: Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" },
+        { label: "SEP: Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "doingAllowing|transplantClassic": {
+      reason: "Transplant is often read as active doing-harm, reinforcing stronger prohibition than omission-style failures.",
+      sources: [
+        { label: "SEP: Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "doingAllowing|trolleyFootbridge": {
+      reason: "Footbridge scenarios are frequently interpreted through doing-harm and agency distinctions.",
+      sources: [
+        { label: "SEP: Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "actUtil|loopTrolley": {
+      reason: "Act-utilitarian ranking typically permits loop redirection because one death prevents five.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" }
+      ]
+    },
+    "deontology|loopTrolley": {
+      reason: "Loop cases constrain deontology by blurring whether the one person is used as a means or harmed as side effect.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP: Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" }
+      ]
+    },
+    "ruleUtil|transplantClassic": {
+      reason: "Rule utilitarianism is constrained to defend strict anti-harvesting rules as utility-protecting social architecture.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "prioritarianism|worldCup": {
+      reason: "Prioritarian weighting constrains simple aggregation by giving greater moral weight to the worst burdens.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "aristotelian|experienceMachine": {
+      reason: "Aristotelian ethics supports refusal-to-plug-in judgments by prioritizing excellent activity over passive sensation.",
+      sources: [
+        { label: "SEP: Virtue Ethics", url: "https://plato.stanford.edu/entries/ethics-virtue/" }
+      ]
+    },
+    "contractualism|drowningChild": {
+      reason: "Easy-rescue obligations are supported when refusing aid is not reasonably justifiable to the person at grave risk.",
+      sources: [
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "sufficientarianism|demandingness": {
+      reason: "Sufficientarian thresholds can constrain demandingness by reducing pressure to maximize after enough is secured.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "prioritarianism|demandingness": {
+      reason: "Prioritarianism can soften demandingness by emphasizing benefits to the worst off rather than endless aggregate gain.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "prioritarianism|aggregation": {
+      reason: "Prioritarianism constrains pure aggregation by reducing the weight of benefits to those already advantaged.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "sufficientarianism|aggregation": {
+      reason: "Sufficientarianism constrains aggregation by prioritizing getting everyone above a threshold before further gains.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "rossPluralism|doingAllowing": {
+      reason: "Rossian pluralism supports doing/allowing asymmetry through a distinct non-maleficence duty.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP: Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "virtueEthics|integrityIssue": {
+      reason: "Virtue ethics supports integrity concerns because character and practical identity are central to moral evaluation.",
+      sources: [
+        { label: "SEP: Virtue Ethics", url: "https://plato.stanford.edu/entries/ethics-virtue/" },
+        { label: "SEP: Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "deontology|rightsConstraints": {
+      reason: "Deontological views support rights as side constraints on permissible action.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "rossPluralism|rightsConstraints": {
+      reason: "Rossian duties of non-maleficence and justice reinforce rights constraints against intentional harm.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "actUtil|rightsConstraints": {
+      reason: "Act utilitarianism is pressured because rights can be overridden whenever utility gains are high enough.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "ruleUtil|rightsConstraints": {
+      reason: "Rule utilitarianism is constrained to explain rights by appealing to long-run utility of rights-protecting rules.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "contractualism|separatenessPersons": {
+      reason: "Contractualism supports separateness by evaluating principles through each person's reasonable rejectability.",
+      sources: [
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "deontology|separatenessPersons": {
+      reason: "Deontology supports separateness through the inviolability of persons and rights.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "consequentialism|separatenessPersons": {
+      reason: "Person-neutral maximizing structures pressure separateness by summing outcomes across distinct individuals.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "consequentialism|supererogation": {
+      reason: "Maximizing frameworks pressure supererogation by turning many optional good acts into requirements.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Supererogation", url: "https://plato.stanford.edu/entries/supererogation/" }
+      ]
+    },
+    "deontology|supererogation": {
+      reason: "Deontology supports supererogation by distinguishing strict duties from meritorious but optional aid.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP: Supererogation", url: "https://plato.stanford.edu/entries/supererogation/" }
+      ]
+    },
+    "deontology|agentCenteredPrerogative": {
+      reason: "Agent-relative restrictions in deontology support bounded prerogatives tied to personal commitments.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP: Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "contractualism|agentCenteredPrerogative": {
+      reason: "Contractualism constrains prerogatives by demanding justifiability to those adversely affected.",
+      sources: [
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "consequentialism|agentCenteredPrerogative": {
+      reason: "Impartial maximizing pressure treats agent-centered prerogatives as potential losses in overall value.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "separatenessPersons|worldCup": {
+      reason: "World Cup reasoning supports separateness by resisting tradeoffs of one severe burden for many trivial gains.",
+      sources: [
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "separatenessPersons|aggregation": {
+      reason: "Aggregation pressures separateness whenever numbers are combined as if persons formed one welfare pool.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "doubleEffect|loopTrolley": {
+      reason: "Loop variants pressure double-effect analysis because the victim is causally necessary yet not straightforwardly intended.",
+      sources: [
+        { label: "SEP: Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" },
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "rightsConstraints|transplantClassic": {
+      reason: "Transplant is a paradigm rights-constraint case: killing one for organs appears impermissible despite better totals.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "rightsConstraints|trolleyFootbridge": {
+      reason: "Footbridge judgments often support rights constraints by rejecting intentional bodily use of one person.",
+      sources: [
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP: Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "rightsConstraints|doingAllowing": {
+      reason: "Doing/allowing distinctions help explain why rights against active harm are stricter than duties to rescue.",
+      sources: [
+        { label: "SEP: Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" },
+        { label: "SEP: Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "supererogation|drowningChild": {
+      reason: "Drowning-child intuitions pressure supererogation by showing some rescue acts are required, not merely admirable.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Supererogation", url: "https://plato.stanford.edu/entries/supererogation/" }
+      ]
+    },
+    "supererogation|demandingness": {
+      reason: "Demandingness disputes determine how much room remains for genuinely optional moral excellence.",
+      sources: [
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP: Supererogation", url: "https://plato.stanford.edu/entries/supererogation/" }
+      ]
+    },
+    "agentCenteredPrerogative|jimIndians": {
+      reason: "Jim-style cases support prerogatives by highlighting agent-centered reasons not to commit certain harms.",
+      sources: [
+        { label: "SEP: Integrity", url: "https://plato.stanford.edu/entries/integrity/" },
+        { label: "SEP: Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "agentCenteredPrerogative|integrityIssue": {
+      reason: "Integrity objections motivate prerogatives that protect practical identity and long-term commitments.",
+      sources: [
+        { label: "SEP: Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "agentCenteredPrerogative|partiality": {
+      reason: "Partiality debates feed bounded prerogatives by legitimizing some priority to relationships and projects.",
+      sources: [
+        { label: "SEP: Virtue Ethics", url: "https://plato.stanford.edu/entries/ethics-virtue/" },
+        { label: "SEP: Feminist Ethics", url: "https://plato.stanford.edu/entries/feminism-ethics/" }
+      ]
+    }
   },
   zh: {
-    "consequentialism|trolley": { reason: "“扳道岔”类电车直觉常支持结果聚合：多救少害看起来可被允许。" },
-    "deontology|trolley": { reason: "“推人挡车”直觉会迫使义务论说明：反工具化约束究竟在何种条件下触发。" },
-    "kantian|trolley": { reason: "康德主义需要区分“改道导致伤害”与“有意把人当手段”两类结构。" },
-    "ruleUtil|trolley": { reason: "规则功利主义受约束于：能否用稳定公共规则解释电车直觉，而非退回个案计算。" },
-    "actUtil|transplant": { reason: "器官移植对行为功利主义施加强压力：最大化救人数可能许可杀害无辜者。" },
-    "deontology|transplant": { reason: "移植直觉通常支持义务论的边界约束：不可故意伤害无辜者作为工具。" },
-    "kant|transplant": { reason: "康德式“人是目的”框架将强制摘取器官视为典型的“仅当手段”。" },
-    "contractualism|worldCup": { reason: "世界杯案例支持契约论的人际正当化路径，而非把大量轻微抱怨直接相加。" },
-    "scanlon|worldCup": { reason: "该案例本身就是为测试斯坎伦“不可合理拒绝”框架中的聚合边界而设计。" },
-    "parfitTriple|worldCup": { reason: "三重理论受约束于：其收敛主张能否处理世界杯类反聚合直觉。" },
-    "consequentialism|experienceMachine": { reason: "体验机器会对享乐主义后果主义施压：真实性与成就似乎也具有独立价值。" },
-    "virtueEthics|drowningChild": { reason: "溺水儿童案例支持德性伦理：见危不救常被解读为品格与实践判断失范。" },
-    "careEthics|drowningChild": { reason: "关怀伦理在低成本救援案例中获得支持，因为其核心是对具体脆弱性的及时回应。" },
-    "actUtil|demandingness": { reason: "苛求性反驳会对行为功利主义施压：它似乎要求行动者持续高强度自我牺牲。" },
-    "parfitTriple|demandingness": { reason: "混合收敛理论需避免把各理论最强苛求性成本叠加在一起。" },
-    "consequentialism|aggregation": { reason: "后果主义结构通常支持聚合：人数与总福祉直接进入结果排序。" },
-    "contractualism|aggregation": { reason: "契约论在聚合问题上承压：需说明“数字何时重要”且不把人降格为福利容器。" },
-    "virtueEthics|partiality": { reason: "德性伦理支持偏私：友情、家庭与公民忠诚中的角色卓越具有规范意义。" },
-    "contractualism|partiality": { reason: "契约论需解释特殊义务如何与“对每个人都可辩护”并存。" },
-    "deontology|doingAllowing": { reason: "作为/不作为区分常支持义务论：主动伤害通常触发更强禁止。" },
-    "actUtil|jimIndians": { reason: "吉姆案例对行为功利主义施压：最佳结果与行动者责任结构可能发生冲突。" },
-    "ruleUtil|jimIndians": { reason: "规则功利主义需说明完整性是否可通过规则设计稳定保护，而非临时例外。" }
+    "consequentialism|trolleySwitch": {
+      reason: "扳道岔结论常与后果主义排序一致：以 1 换 5 的改道被视为可允许。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP：Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "actUtil|trolleyFootbridge": {
+      reason: "行为功利主义在推人案中可能给出许可结论，但这与广泛的反推人直觉冲突。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP：Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "ruleUtil|trolleyFootbridge": {
+      reason: "规则功利主义受约束于：是否可通过公共规则层面解释推人禁令的长期效益优势。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "deontology|trolleyFootbridge": {
+      reason: "推人案例通常支持义务论的反工具化约束与权利边界。",
+      sources: [
+        { label: "SEP：Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP：Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "kantian|trolleyFootbridge": {
+      reason: "康德主义通常将推人理解为把人当作实现他人利益的工具。",
+      sources: [
+        { label: "SEP：Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "thresholdDeon|trolleyFootbridge": {
+      reason: "阈值义务论要求说明：在何种灾难后果下，约束可被突破。",
+      sources: [
+        { label: "SEP：Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "deontology|transplantClassic": {
+      reason: "器官移植直觉常支持“不可故意伤害无辜者”的边界约束。",
+      sources: [
+        { label: "SEP：Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "kant|transplantClassic": {
+      reason: "康德式“人是目的”将强制摘取器官视作典型仅当手段。",
+      sources: [
+        { label: "SEP：Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "actUtil|transplantClassic": {
+      reason: "行为功利主义在该案受压：个案总效用最大化可能许可牺牲一人。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "thresholdDeon|transplantClassic": {
+      reason: "阈值方案需交代“何时可破约束”，否则难以稳定解释移植直觉。",
+      sources: [
+        { label: "SEP：Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "contractualism|worldCup": {
+      reason: "世界杯结构支持契约论的人际可辩护路径，而非简单把抱怨相加。",
+      sources: [
+        { label: "SEP：Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "scanlon|worldCup": {
+      reason: "该情景就是为了测试斯坎伦框架中“许多轻微 vs 一项严重”比较。",
+      sources: [
+        { label: "SEP：Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "consequentialism|worldCup": {
+      reason: "当大量微小收益压过严重负担时，后果主义会面临反聚合直觉压力。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP：Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "parfitTriple|worldCup": {
+      reason: "三重理论的收敛主张受此类反聚合案例约束。",
+      sources: [
+        { label: "SEP：Parfit", url: "https://plato.stanford.edu/entries/parfit/" }
+      ]
+    },
+    "consequentialism|experienceMachine": {
+      reason: "体验机器对享乐主义后果论施压：真实性与成就似乎具有独立价值。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "virtueEthics|experienceMachine": {
+      reason: "德性伦理支持拒绝接入：实践活动与人格形成无法被纯快感替代。",
+      sources: [
+        { label: "SEP：Virtue Ethics", url: "https://plato.stanford.edu/entries/ethics-virtue/" }
+      ]
+    },
+    "consequentialism|drowningChild": {
+      reason: "低成本救援直觉可支持后果主义行善义务：能防严重伤害就应行动。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "virtueEthics|drowningChild": {
+      reason: "德性路径把不救援视为同情与实践智慧上的缺陷。",
+      sources: [
+        { label: "SEP：Virtue Ethics", url: "https://plato.stanford.edu/entries/ethics-virtue/" }
+      ]
+    },
+    "careEthics|drowningChild": {
+      reason: "关怀伦理在该案中获支持：核心是对具体脆弱者的及时回应。",
+      sources: [
+        { label: "SEP：Feminist Ethics", url: "https://plato.stanford.edu/entries/feminism-ethics/" }
+      ]
+    },
+    "actUtil|demandingness": {
+      reason: "苛求性反驳直接冲击行为功利主义：似乎要求持续高强度牺牲。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "consequentialism|demandingness": {
+      reason: "一般后果主义需给出牺牲上限，避免道德吞没个人计划。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "parfitTriple|demandingness": {
+      reason: "收敛理论需避免叠加各传统中最强苛求成本。",
+      sources: [
+        { label: "SEP：Parfit", url: "https://plato.stanford.edu/entries/parfit/" }
+      ]
+    },
+    "consequentialism|aggregation": {
+      reason: "后果主义通常支持聚合：人数和总福祉直接影响排序。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" }
+      ]
+    },
+    "contractualism|aggregation": {
+      reason: "契约论受压于“数字何时该算且如何算”的解释任务。",
+      sources: [
+        { label: "SEP：Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "scanlon|aggregation": {
+      reason: "斯坎伦框架需要处理“大量小抱怨 vs 单一大负担”的比较结构。",
+      sources: [
+        { label: "SEP：Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "deontology|doingAllowing": {
+      reason: "作为/不作为区分常为义务论提供主动伤害更强禁止的根据。",
+      sources: [
+        { label: "SEP：Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" },
+        { label: "SEP：Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "consequentialism|doingAllowing": {
+      reason: "结果固定时，后果主义需解释该区分为何应改变结论。",
+      sources: [
+        { label: "SEP：Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "deontology|doubleEffect": {
+      reason: "双重效果原则是义务论处理中“意图相关约束”的重要工具。",
+      sources: [
+        { label: "SEP：Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" },
+        { label: "SEP：Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" }
+      ]
+    },
+    "kant|doubleEffect": {
+      reason: "康德式约束与双重效果中的意图区分具有较强亲和性。",
+      sources: [
+        { label: "SEP：Deontological Ethics", url: "https://plato.stanford.edu/entries/ethics-deontological/" },
+        { label: "SEP：Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" }
+      ]
+    },
+    "actUtil|jimIndians": {
+      reason: "吉姆案例将“最优结果”与“行动者完整性”直接对冲，对行为功利主义施压。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP：Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "ruleUtil|jimIndians": {
+      reason: "规则功利主义需说明：规则层设计能否充分回应完整性批评。",
+      sources: [
+        { label: "SEP：Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "actUtil|integrityIssue": {
+      reason: "完整性反驳指出行为功利主义可能让行动者与其核心承诺异化。",
+      sources: [
+        { label: "SEP：Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "ruleUtil|integrityIssue": {
+      reason: "规则功利主义仍需证明其不只是把完整性问题后移而非解决。",
+      sources: [
+        { label: "SEP：Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "virtueEthics|partiality": {
+      reason: "德性伦理通过角色卓越支持友谊、家庭与忠诚中的偏私义务。",
+      sources: [
+        { label: "SEP：Virtue Ethics", url: "https://plato.stanford.edu/entries/ethics-virtue/" }
+      ]
+    },
+    "careEthics|partiality": {
+      reason: "关怀伦理强调关系优先与特殊义务，因此对偏私给出正向支持。",
+      sources: [
+        { label: "SEP：Feminist Ethics", url: "https://plato.stanford.edu/entries/feminism-ethics/" }
+      ]
+    },
+    "contractualism|partiality": {
+      reason: "契约论面临解释压力：特殊义务如何与对每个人可辩护并存。",
+      sources: [
+        { label: "SEP：Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "integrityIssue|jimIndians": {
+      reason: "吉姆案例是完整性反驳的标志性场景：作者责任本身进入道德评估。",
+      sources: [
+        { label: "SEP：Integrity", url: "https://plato.stanford.edu/entries/integrity/" }
+      ]
+    },
+    "aggregation|taurekNumbers": {
+      reason: "人数问题直接挑战线性聚合假设，迫使理论交代“数字为何决定”。",
+      sources: [
+        { label: "SEP：Consequentialism", url: "https://plato.stanford.edu/entries/consequentialism/" },
+        { label: "SEP：Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "aggregation|worldCup": {
+      reason: "世界杯情景持续检验“大量轻微抱怨是否可聚合压过重大负担”。",
+      sources: [
+        { label: "SEP：Contractualism", url: "https://plato.stanford.edu/entries/contractualism/" }
+      ]
+    },
+    "doubleEffect|trolleySwitch": {
+      reason: "改道案常被解释为副作用结构，而非有意伤害结构。",
+      sources: [
+        { label: "SEP：Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" }
+      ]
+    },
+    "doubleEffect|trolleyFootbridge": {
+      reason: "推人案对双重效果施压：意图判定与因果路径争议集中出现。",
+      sources: [
+        { label: "SEP：Doctrine of Double Effect", url: "https://plato.stanford.edu/entries/double-effect/" },
+        { label: "SEP：Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "doingAllowing|transplantClassic": {
+      reason: "移植案常被视作主动致害，因而触发更强禁止直觉。",
+      sources: [
+        { label: "SEP：Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    },
+    "doingAllowing|trolleyFootbridge": {
+      reason: "推人案常通过“主动造成伤害”而非“放任伤害”来解释其不可接受性。",
+      sources: [
+        { label: "SEP：Doing vs Allowing Harm", url: "https://plato.stanford.edu/entries/doing-allowing/" }
+      ]
+    }
   }
 };
 
