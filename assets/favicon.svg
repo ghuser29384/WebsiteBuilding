@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="CHSEB favicon">
+  <defs>
+    <path id="topArc" d="M 64 256 A 192 192 0 0 1 448 256" />
+    <path id="bottomArc" d="M 448 256 A 192 192 0 0 1 64 256" />
+  </defs>
+
+  <circle cx="256" cy="256" r="248" fill="#111111" />
+  <circle cx="256" cy="256" r="236" fill="#2b95d2" stroke="#5c5f63" stroke-width="8" />
+
+  <ellipse cx="188" cy="236" rx="86" ry="58" fill="#ffffff" />
+  <path d="M 128 285 L 104 325 L 160 307 Z" fill="#ffffff" />
+
+  <circle cx="336" cy="236" r="58" fill="#ffffff" />
+  <path d="M 370 276 L 378 334 L 335 286 Z" fill="#ffffff" />
+
+  <text fill="#ffffff" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="25" letter-spacing="1.2">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">CHINA HIGH SCHOOL ETHICS BOWL</textPath>
+  </text>
+
+  <text fill="#ffffff" font-family="'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="31" letter-spacing="2">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">中国高中哲学碗</textPath>
+  </text>
+
+  <text x="42" y="369" fill="#ffffff" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28">?</text>
+  <text x="457" y="369" fill="#ffffff" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28">?</text>
+</svg>

@@ -545,9 +545,67 @@ main {
   gap: 1rem;
 }
 
+.legend-row {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.legend-swatch {
+  width: 0.9rem;
+  height: 0.32rem;
+  border-radius: 999px;
+  background: rgba(61, 61, 66, 0.4);
+}
+
+.legend-swatch.agreement {
+  background: rgba(22, 163, 74, 0.55);
+}
+
+.legend-swatch.disagreement {
+  background: rgba(185, 28, 28, 0.55);
+}
+
+.legend-swatch.issue {
+  background: transparent;
+  border-top: 2px dashed rgba(31, 75, 143, 0.6);
+  border-radius: 0;
+}
+
+.legend-swatch.taxonomy {
+  background: rgba(61, 61, 66, 0.42);
+}
+
+.legend-swatch.pressure {
+  background: transparent;
+  border-top: 2px dashed rgba(185, 28, 28, 0.62);
+  border-radius: 0;
+}
+
+.legend-swatch.support {
+  background: transparent;
+  border-top: 2px dashed rgba(22, 163, 74, 0.62);
+  border-radius: 0;
+}
+
+.legend-swatch.constraint {
+  background: transparent;
+  border-top: 2px dashed rgba(31, 75, 143, 0.62);
+  border-radius: 0;
+}
+
 .theory-graph {
   position: relative;
-  min-height: 540px;
+  min-height: 700px;
   border: 1px solid var(--line);
   border-radius: var(--radius-l);
   background: #fff;
@@ -565,6 +623,15 @@ main {
 .theory-edge {
   stroke: rgba(61, 61, 66, 0.34);
   stroke-width: 2;
+  opacity: 0.8;
+}
+
+.theory-edge.agreement {
+  stroke: rgba(22, 163, 74, 0.55);
+}
+
+.theory-edge.disagreement {
+  stroke: rgba(185, 28, 28, 0.55);
 }
 
 .theory-edge.issue {
@@ -572,14 +639,35 @@ main {
   stroke-dasharray: 4 4;
 }
 
+.theory-edge.issue.pressure {
+  stroke: rgba(185, 28, 28, 0.58);
+}
+
+.theory-edge.issue.support {
+  stroke: rgba(22, 163, 74, 0.58);
+}
+
+.theory-edge.issue.constraint {
+  stroke: rgba(31, 75, 143, 0.58);
+}
+
+.theory-edge.connected {
+  opacity: 1;
+  stroke-width: 2.6;
+}
+
+.theory-edge.dimmed {
+  opacity: 0.18;
+}
+
 .theory-node {
   position: absolute;
   transform: translate(-50%, -50%);
-  max-width: 9.3rem;
+  max-width: 8.6rem;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
-  padding: 0.4rem 0.72rem;
-  font-size: 0.78rem;
+  padding: 0.35rem 0.62rem;
+  font-size: 0.73rem;
   font-weight: 600;
   line-height: 1.2;
   text-align: center;
@@ -619,11 +707,74 @@ main {
   color: #242428;
 }
 
+#theoryPanelWhat,
+#theoryPanelWhy,
+#theoryPanelClassic,
+#normPanelCore,
+#normPanelIntuition,
+#normPanelClassic {
+  margin: 0.1rem 0 0.35rem;
+  color: #4b5563;
+  line-height: 1.45;
+}
+
 .theory-panel ul {
   margin: 0.62rem 0 0;
   padding-left: 1.08rem;
   display: grid;
   gap: 0.42rem;
+}
+
+.relation-heading {
+  margin: 0.72rem 0 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #4b5563;
+}
+
+#theoryPanelIssueReasons,
+#normPanelIssueReasons {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.55rem;
+  gap: 0.52rem;
+}
+
+.relation-reason-item {
+  padding: 0.58rem 0.62rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: #f8fafc;
+}
+
+.relation-reason-title {
+  margin: 0;
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.relation-reason-body {
+  margin: 0.26rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #4b5563;
+}
+
+.relation-reason-sources {
+  margin: 0.34rem 0 0;
+  font-size: 0.74rem;
+  color: #6b7280;
+}
+
+.relation-reason-sources a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.relation-reason-sources a:hover {
+  text-decoration: underline;
 }
 
 .room-card {
@@ -762,6 +913,6 @@ main {
   }
 
   .theory-graph {
-    min-height: 560px;
+    min-height: 760px;
   }
 }
