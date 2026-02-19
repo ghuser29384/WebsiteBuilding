@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="titleJoinUs">Join Us | China High School Ethics Bowl</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="joinus">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" data-local-link>
+        <img class="brand-logo" src="assets/chseb-logo.svg" alt="China High School Ethics Bowl logo">
+        <span class="brand-text">
+          <strong data-i18n="brandName">China High School Ethics Bowl</strong>
+          <span data-i18n="brandTag">Collaborative ethical dialogue for high school students</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a class="nav-link" href="index.html" data-local-link data-i18n="navHome">Home</a>
+        <a class="nav-link" href="competition-structure.html" data-local-link data-i18n="navStructure">Competition Structure</a>
+        <a class="nav-link" href="public-discourse.html" data-local-link data-i18n="navDiscourse">Public Discourse</a>
+        <a class="nav-link" href="resources.html" data-local-link data-i18n="navResources">Resources</a>
+        <a class="nav-link" href="registration-contact.html" data-local-link data-i18n="navRegister">Register & Contact</a>
+        <a class="nav-link" href="metaethics-map.html" data-local-link data-i18n="navMetaethics">Metaethics Map</a>
+        <a class="nav-link" href="meeting-rooms.html" data-local-link data-i18n="navRooms">24/7 Rooms</a>
+        <a class="nav-link active" href="join-us.html" data-local-link data-i18n="navJoinUs">Join Us</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language Switcher">
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" type="button" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero hero-simple">
+      <div class="hero-content reveal">
+        <p class="kicker" data-i18n="joinHeroKicker">Build CHSEB Together</p>
+        <h1 data-i18n="joinHeroTitle">Volunteer and Judge Recruitment</h1>
+        <p class="lead" data-i18n="joinHeroSubtitle">
+          CHSEB is hiring volunteers to run tournaments and judges with strong backgrounds in philosophy, ethics, or related disciplines.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="joinRolesHeading">Open Roles</h2>
+      <div class="card-grid">
+        <article class="card reveal" style="--delay: 0.05s;">
+          <h3 data-i18n="joinRoleOpsTitle">Tournament Operations Volunteer</h3>
+          <p data-i18n="joinRoleOpsBody">Support scheduling, room moderation, team check-in, scoring logistics, and communications.</p>
+        </article>
+        <article class="card reveal" style="--delay: 0.09s;">
+          <h3 data-i18n="joinRoleJudgeTitle">Philosophy Judge</h3>
+          <p data-i18n="joinRoleJudgeBody">Evaluate rounds with explicit attention to argument quality, conceptual clarity, and ethical depth.</p>
+        </article>
+        <article class="card reveal" style="--delay: 0.13s;">
+          <h3 data-i18n="joinRoleTrainingTitle">Coach and Training Volunteer</h3>
+          <p data-i18n="joinRoleTrainingBody">Help onboard new schools, run mock rounds, and train students in constructive dialogue norms.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="joinJudgeHeading">Preferred Judge Profile (Philosophy Background)</h2>
+      <ul class="check-list highlight-list reveal" style="--delay: 0.06s;">
+        <li data-i18n="joinJudgeReq1">Background in philosophy, ethics, political theory, law, or closely related fields.</li>
+        <li data-i18n="joinJudgeReq2">Capacity to evaluate argument structure rather than rhetorical speed.</li>
+        <li data-i18n="joinJudgeReq3">Comfort engaging plural perspectives without lowering analytic rigor.</li>
+        <li data-i18n="joinJudgeReq4">Bilingual fluency (English and Mandarin) is strongly welcomed but not mandatory.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="joinVolunteerHeading">What Volunteers Help Deliver</h2>
+      <div class="timeline-grid">
+        <article class="timeline-card reveal" style="--delay: 0.05s;">
+          <h3 data-i18n="joinVolunteer1Title">Pre-Event Setup</h3>
+          <p data-i18n="joinVolunteer1Body">Calendar coordination, judge calibration calls, and technical checks.</p>
+        </article>
+        <article class="timeline-card reveal" style="--delay: 0.09s;">
+          <h3 data-i18n="joinVolunteer2Title">Tournament Day</h3>
+          <p data-i18n="joinVolunteer2Body">Session moderation, scoring workflow support, and participant assistance.</p>
+        </article>
+        <article class="timeline-card reveal" style="--delay: 0.13s;">
+          <h3 data-i18n="joinVolunteer3Title">Post-Event Follow Up</h3>
+          <p data-i18n="joinVolunteer3Body">Feedback summaries, educational debriefs, and regional growth planning.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="joinFormHeading">Apply to Join CHSEB</h2>
+      <p class="reveal" style="--delay: 0.04s;" data-i18n="joinFormIntro">Submit this form to open a prefilled email application to the CHSEB team.</p>
+      <form class="contact-form reveal" style="--delay: 0.08s;" id="joinUsForm" novalidate>
+        <div class="form-row">
+          <label for="joinRole" data-i18n="joinFieldRole">Role</label>
+          <select id="joinRole" name="joinRole" required>
+            <option value="" data-i18n="joinRoleChoose">Select one</option>
+            <option value="operations-volunteer" data-i18n="joinRoleOptionOps">Operations Volunteer</option>
+            <option value="philosophy-judge" data-i18n="joinRoleOptionJudge">Philosophy Judge</option>
+            <option value="both" data-i18n="joinRoleOptionBoth">Both</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="joinName" data-i18n="joinFieldName">Full Name</label>
+          <input id="joinName" name="joinName" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="joinEmail" data-i18n="joinFieldEmail">Email</label>
+          <input id="joinEmail" name="joinEmail" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="joinAffiliation" data-i18n="joinFieldAffiliation">Affiliation</label>
+          <input id="joinAffiliation" name="joinAffiliation" type="text">
+        </div>
+        <div class="form-row form-row-full">
+          <label for="joinBackground" data-i18n="joinFieldBackground">Philosophy / Ethics Background</label>
+          <textarea id="joinBackground" name="joinBackground" rows="3"></textarea>
+        </div>
+        <div class="form-row form-row-full">
+          <label for="joinAvailability" data-i18n="joinFieldAvailability">Availability</label>
+          <textarea id="joinAvailability" name="joinAvailability" rows="2"></textarea>
+        </div>
+        <div class="form-row form-row-full">
+          <label for="joinMessage" data-i18n="joinFieldMessage">Additional Message</label>
+          <textarea id="joinMessage" name="joinMessage" rows="4"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" data-i18n="joinFormSubmit">Generate Application Email</button>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="joinContactHeading">Direct Contact</h2>
+      <div class="card-grid two-col">
+        <article class="card reveal" style="--delay: 0.06s;">
+          <h3 data-i18n="joinContactVolunteerTitle">Volunteer Desk</h3>
+          <p><a class="inline-link" href="mailto:joinus@chseb.org">joinus@chseb.org</a></p>
+          <p data-i18n="joinContactVolunteerBody">For operations, coaching support, and event logistics volunteering.</p>
+        </article>
+        <article class="card reveal" style="--delay: 0.10s;">
+          <h3 data-i18n="joinContactJudgeTitle">Judge Recruitment</h3>
+          <p><a class="inline-link" href="mailto:judges@chseb.org">judges@chseb.org</a></p>
+          <p data-i18n="joinContactJudgeBody">For philosophy judges, rubric calibration, and academic advisory participation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section callout reveal">
+      <h2 data-i18n="joinCtaTitle">Prepare with Rulebook and Casebook</h2>
+      <p data-i18n="joinCtaBody">Review CHSEB materials to align your judging and volunteering with shared standards.</p>
+      <a class="btn btn-primary" href="resources.html" data-local-link data-i18n="joinCtaBtn">Open Resources</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footerLine">China High School Ethics Bowl (CHSEB) builds reasoned, respectful, and pluralistic public dialogue for the next generation.</p>
+    </div>
+  </footer>
+</body>
+</html>

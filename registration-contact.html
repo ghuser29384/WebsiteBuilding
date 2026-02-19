@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="titleRegister">Register & Contact | China High School Ethics Bowl</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="register">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" data-local-link>
+        <img class="brand-logo" src="assets/chseb-logo.svg" alt="China High School Ethics Bowl logo">
+        <span class="brand-text">
+          <strong data-i18n="brandName">China High School Ethics Bowl</strong>
+          <span data-i18n="brandTag">Collaborative ethical dialogue for high school students</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a class="nav-link" href="index.html" data-local-link data-i18n="navHome">Home</a>
+        <a class="nav-link" href="competition-structure.html" data-local-link data-i18n="navStructure">Competition Structure</a>
+        <a class="nav-link" href="public-discourse.html" data-local-link data-i18n="navDiscourse">Public Discourse</a>
+        <a class="nav-link" href="resources.html" data-local-link data-i18n="navResources">Resources</a>
+        <a class="nav-link active" href="registration-contact.html" data-local-link data-i18n="navRegister">Register & Contact</a>
+        <a class="nav-link" href="metaethics-map.html" data-local-link data-i18n="navMetaethics">Metaethics Map</a>
+        <a class="nav-link" href="meeting-rooms.html" data-local-link data-i18n="navRooms">24/7 Rooms</a>
+        <a class="nav-link" href="join-us.html" data-local-link data-i18n="navJoinUs">Join Us</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language Switcher">
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" type="button" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero hero-simple">
+      <div class="hero-content reveal">
+        <p class="kicker" data-i18n="registerHeroKicker">Join CHSEB</p>
+        <h1 data-i18n="registerHeroTitle">Registration and Contact</h1>
+        <p class="lead" data-i18n="registerHeroSubtitle">
+          Register school teams, join the judge pool, or contact organizers for implementation support.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="registerPathwaysHeading">Participation Pathways</h2>
+      <div class="card-grid">
+        <article class="card reveal" style="--delay: 0.05s;">
+          <h3 data-i18n="registerPathway1Title">Student Teams</h3>
+          <p data-i18n="registerPathway1Body">Schools may register one or more 3-5 student teams with a coach advisor.</p>
+        </article>
+        <article class="card reveal" style="--delay: 0.09s;">
+          <h3 data-i18n="registerPathway2Title">Judges & Moderators</h3>
+          <p data-i18n="registerPathway2Body">Teachers, graduate students, and trained volunteers can apply as judges or moderators.</p>
+        </article>
+        <article class="card reveal" style="--delay: 0.13s;">
+          <h3 data-i18n="registerPathway3Title">Regional Hosts</h3>
+          <p data-i18n="registerPathway3Body">Schools and education groups can host regional rounds with CHSEB support materials.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="registerStepsHeading">Registration Steps</h2>
+      <ol class="protocol-list">
+        <li class="reveal" style="--delay: 0.05s;" data-i18n="registerStep1">Download the bilingual rulebook and casebook from Resources.</li>
+        <li class="reveal" style="--delay: 0.09s;" data-i18n="registerStep2">Prepare school/team information and a coach contact person.</li>
+        <li class="reveal" style="--delay: 0.13s;" data-i18n="registerStep3">Submit inquiry email with your intended participation pathway.</li>
+        <li class="reveal" style="--delay: 0.17s;" data-i18n="registerStep4">CHSEB staff reply with confirmation timeline and onboarding packet.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="registerContactHeading">Contact Channels</h2>
+      <div class="card-grid two-col">
+        <article class="card reveal" style="--delay: 0.06s;">
+          <h3 data-i18n="registerContactGeneralTitle">General Inquiry</h3>
+          <p><a class="inline-link" href="mailto:info@chseb.org">info@chseb.org</a></p>
+          <p data-i18n="registerContactGeneralBody">For program overview, partnerships, and implementation questions.</p>
+        </article>
+        <article class="card reveal" style="--delay: 0.10s;">
+          <h3 data-i18n="registerContactRegTitle">Registration Desk</h3>
+          <p><a class="inline-link" href="mailto:registration@chseb.org">registration@chseb.org</a></p>
+          <p data-i18n="registerContactRegBody">For team sign-up, judge applications, and hosting requests.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="registerFormHeading">Quick Inquiry Form</h2>
+      <p class="reveal" style="--delay: 0.04s;" data-i18n="registerFormIntro">This form opens your email client with a prefilled CHSEB inquiry template.</p>
+      <form class="contact-form reveal" style="--delay: 0.08s;" id="registrationForm" novalidate>
+        <div class="form-row">
+          <label for="orgName" data-i18n="registerFieldOrg">School / Organization</label>
+          <input id="orgName" name="orgName" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="contactName" data-i18n="registerFieldName">Contact Name</label>
+          <input id="contactName" name="contactName" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="contactEmail" data-i18n="registerFieldEmail">Email</label>
+          <input id="contactEmail" name="contactEmail" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="pathway" data-i18n="registerFieldPathway">Participation Pathway</label>
+          <select id="pathway" name="pathway" required>
+            <option value="" data-i18n="registerPathwayChoose">Select one</option>
+            <option value="student-team" data-i18n="registerPathwayOptionTeam">Student Team</option>
+            <option value="judge-moderator" data-i18n="registerPathwayOptionJudge">Judge / Moderator</option>
+            <option value="regional-host" data-i18n="registerPathwayOptionHost">Regional Host</option>
+          </select>
+        </div>
+        <div class="form-row form-row-full">
+          <label for="message" data-i18n="registerFieldMessage">Message</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" data-i18n="registerFormSubmit">Generate Inquiry Email</button>
+      </form>
+    </section>
+
+    <section class="section callout reveal">
+      <h2 data-i18n="registerCtaTitle">Need Rulebook and Casebook Files First?</h2>
+      <p data-i18n="registerCtaBody">Open the resources page to download bilingual documents before submitting your inquiry.</p>
+      <a class="btn btn-primary" href="resources.html" data-local-link data-i18n="registerCtaBtn">Open Resources</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footerLine">China High School Ethics Bowl (CHSEB) builds reasoned, respectful, and pluralistic public dialogue for the next generation.</p>
+    </div>
+  </footer>
+</body>
+</html>

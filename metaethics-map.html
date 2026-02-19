@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="titleMetaethics">Metaethics Map | China High School Ethics Bowl</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="metaethics">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" data-local-link>
+        <img class="brand-logo" src="assets/chseb-logo.svg" alt="China High School Ethics Bowl logo">
+        <span class="brand-text">
+          <strong data-i18n="brandName">China High School Ethics Bowl</strong>
+          <span data-i18n="brandTag">Collaborative ethical dialogue for high school students</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a class="nav-link" href="index.html" data-local-link data-i18n="navHome">Home</a>
+        <a class="nav-link" href="competition-structure.html" data-local-link data-i18n="navStructure">Competition Structure</a>
+        <a class="nav-link" href="public-discourse.html" data-local-link data-i18n="navDiscourse">Public Discourse</a>
+        <a class="nav-link" href="resources.html" data-local-link data-i18n="navResources">Resources</a>
+        <a class="nav-link" href="registration-contact.html" data-local-link data-i18n="navRegister">Register & Contact</a>
+        <a class="nav-link active" href="metaethics-map.html" data-local-link data-i18n="navMetaethics">Metaethics Map</a>
+        <a class="nav-link" href="meeting-rooms.html" data-local-link data-i18n="navRooms">24/7 Rooms</a>
+        <a class="nav-link" href="join-us.html" data-local-link data-i18n="navJoinUs">Join Us</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language Switcher">
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" type="button" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero hero-simple">
+      <div class="hero-content reveal">
+        <p class="kicker" data-i18n="metaHeroKicker">Interactive Metaethics</p>
+        <h1 data-i18n="metaHeroTitle">Moral Cognitivism vs. Non-Cognitivism</h1>
+        <p class="lead" data-i18n="metaHeroSubtitle">
+          Explore how metaethical theories connect, conflict, and depend on deeper assumptions about truth, motivation, and moral explanation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="metaOverviewHeading">Core Contrast</h2>
+      <div class="card-grid two-col">
+        <article class="card reveal" style="--delay: 0.05s;">
+          <h3 data-i18n="metaOverviewCogTitle">Moral Cognitivism</h3>
+          <p data-i18n="metaOverviewCogBody">Moral judgments express beliefs and are truth-apt. Theories differ on whether any moral beliefs are actually true.</p>
+        </article>
+        <article class="card reveal" style="--delay: 0.09s;">
+          <h3 data-i18n="metaOverviewNonCogTitle">Moral Non-Cognitivism</h3>
+          <p data-i18n="metaOverviewNonCogBody">Moral judgments primarily express non-belief attitudes, prescriptions, or commitments rather than ordinary truth-evaluable beliefs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="metaIssuesHeading">Undergirding Issues</h2>
+      <ul class="check-list highlight-list reveal" style="--delay: 0.06s;">
+        <li data-i18n="metaIssue1">Truthmaker Maximalism and whether every truth requires a robust ontological ground.</li>
+        <li data-i18n="metaIssue2">The queerness challenge to objective moral properties.</li>
+        <li data-i18n="metaIssue3">Frege-Geach style embedding problems for expressivist semantics.</li>
+        <li data-i18n="metaIssue4">Motivation internalism and whether sincere moral judgment necessarily motivates.</li>
+        <li data-i18n="metaIssue5">Moral disagreement: belief conflict, attitude clash, or both.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="reveal" data-i18n="metaMapHeading">Theory Relationship Web</h2>
+      <p class="reveal" style="--delay: 0.04s;" data-i18n="metaMapIntro">Click any node to inspect dependencies, pressure points, and falsification conditions.</p>
+      <div class="theory-map-wrap">
+        <div class="theory-graph reveal" style="--delay: 0.08s;" id="theoryGraph"></div>
+        <aside class="theory-panel reveal" style="--delay: 0.12s;">
+          <h3 data-i18n="metaPanelHeading">Focused Analysis</h3>
+          <h4 id="theoryPanelNodeTitle" data-i18n="metaPanelDefaultTitle">Select a theory node</h4>
+          <p id="theoryPanelNodeBody" data-i18n="metaPanelDefaultBody">Choose a node in the web to see core claims and what could undermine it.</p>
+          <ul id="theoryPanelClaims"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section callout reveal">
+      <h2 data-i18n="metaCtaTitle">Discuss These Views Live</h2>
+      <p data-i18n="metaCtaBody">Move from map exploration to live dialogue in the 24/7 philosophical meeting rooms.</p>
+      <a class="btn btn-primary" href="meeting-rooms.html" data-local-link data-i18n="metaCtaBtn">Open 24/7 Rooms</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footerLine">China High School Ethics Bowl (CHSEB) builds reasoned, respectful, and pluralistic public dialogue for the next generation.</p>
+    </div>
+  </footer>
+</body>
+</html>
